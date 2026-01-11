@@ -121,6 +121,62 @@ const contentData = [
     title: "Smart City Hackathon Winners",
     description: "Developed an IoT based traffic management system using swarm robotics principles."
   },
+  {
+    id: 14,
+    type: "info",
+    Icon: AboutUs,
+    members: "150+",
+    description: "Active Members"
+  },
+  {
+    id: 15,
+    type: "info",
+    Icon: Projects,
+    members: "50+",
+    description: "Projects Completed"
+  },
+  {
+    id: 16,
+    type: "info",
+    Icon: Innovation,
+    members: "23+",
+    description: "Awards Won"
+  },
+  {
+    id: 17,
+    type: "info",
+    Icon: Events,
+    members: "7+",
+    description: "Years Active"
+  },
+  {
+    id: 18,
+    type: "longtimeInfo",
+    Icon: Circle,
+    title: "Our Mission",
+    description: "To enhance students technical skills by fostering hands-on learning in robotics, automation, electronics, and emerging technologies while promoting innovation and teamwork.",
+  },
+  {
+    id: 19,
+    type: "longtimeInfo",
+    Icon: Events,
+    title: "Our Vision",
+    description: "To build a strong robotics culture at NIT Patna and beyond, empowering students across disciplines to innovate, collaborate, and create impactful technological solutions.",
+  },
+  {
+    id: 20,
+    type: "longtimeInfo",
+    Icon: Projects,
+    title: "Our Objective",
+    description: [
+      "To stimulate interest in robotics among students",
+      "To provide practical exposure through projects, workshops, and competitions",
+      "To encourage interdisciplinary collaboration and innovation",
+      "To represent the institute in technical events, hackathons, and ideathons",
+      "To make robotics accessible to a wider student community", 
+    ]
+  },
+  
 ];
 
 export default contentData;

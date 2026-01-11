@@ -1,14 +1,16 @@
 import React from 'react'
-import { useNavigate } from "react-router-dom"
 import logo from './assets/Robotics_logo.png'
 import './appStyle.css'
 import contentData from './data/contentData';
 import Events from "../src/assets/icons/events.svg?react"
 import Group from "../src/assets/icons/about.svg?react"
 
+import About from './components/About';
+// import Event from './components/Event'
+
 const App = () => {
-  const navigate = useNavigate();
-  const [humberger, setHumberger] = React.useState(false);
+  const [openPage, setOpenPage] = React.useState("home");
+  const [hamburger, setHamburger] = React.useState(false);
 
   return (
     <div className='main--container--mn'>
@@ -20,43 +22,44 @@ const App = () => {
           <h1>Robotics club</h1>
         </div>
         <div className="navigating--navbar">
-          <button>Home</button>
-          <button onClick={() => navigate("/about")}>About</button>
-          <button onClick={() => navigate("/projects")}>Projects</button>
-          <button onClick={() => navigate("/events")}>Events</button>
-          <button onClick={() => navigate("/teams")}>Teams</button>
-          <button onClick={() => navigate("/news")}>News</button>
-          <button onClick={() => navigate("/achievements")}>Achievements</button>
-          <button onClick={() => navigate("/contact")}>Contact</button>
+          <button onClick={() => setOpenPage("home")}>Home</button>
+          <button onClick={() => setOpenPage("about")}>About</button>
+          <button onClick={() => setOpenPage("projects")}>Projects</button>
+          <button onClick={() => setOpenPage("events")}>Events</button>
+          <button onClick={() => setOpenPage("teams")}>Teams</button>
+          <button onClick={() => setOpenPage("news")}>News</button>
+          <button onClick={() => setOpenPage("achievement")}>Achievements</button>
+          <button onClick={() => setOpenPage("contact")}>Contact</button>
         </div>
 
         {/* Humberger */}
 
         <button
-          className={`hamburger ${humberger ? "isOpen" : ""}`}
-          onClick={() => setHumberger(prev => !prev)}
-          aria-level="Toggle menu"
+          className={`hamburger ${hamburger ? "isOpen" : ""}`}
+          onClick={() => setHamburger(prev => !prev)}
+          aria-label="Toggle menu"
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <div className={`mobile-menu ${humberger ? "show" : ""}`} onClick={() => setHumberger(prev => !prev)}>
-          <button>Home</button>
-          <button onClick={() => { navigate("/about"); setHumberger(false); }}>About</button>
-          <button onClick={() => { navigate("/projects"); setHumberger(false); }}>Projects</button>
-          <button onClick={() => { navigate("/events"); setHumberger(false); }}>Events</button>
-          <button onClick={() => { navigate("/teams"); setHumberger(false); }}>Teams</button>
-          <button onClick={() => { navigate("/news"); setHumberger(false); }}>News</button>
-          <button onClick={() => { navigate("/achievements"); setHumberger(false); }}>Achievements</button>
-          <button onClick={() => { navigate("/contact"); setHumberger(false); }}>Contact</button>
+        <div className={`mobile-menu ${hamburger ? "show" : ""}`} onClick={() => setHamburger(prev => !prev)}>
+          <button onClick={() => { setOpenPage("home"); setHamburger(false); }}>Home</button>
+          <button onClick={() => { setOpenPage("about"); setHamburger(false); }}>About</button>
+          <button onClick={() => { setOpenPage("projects"); setHamburger(false); }}>Projects</button>
+          <button onClick={() => { setOpenPage("events"); setHamburger(false); }}>Events</button>
+          <button onClick={() => { setOpenPage("teams"); setHamburger(false); }}>Teams</button>
+          <button onClick={() => { setOpenPage("news"); setHamburger(false); }}>News</button>
+          <button onClick={() => { setOpenPage("achievement"); setHamburger(false); }}>Achievements</button>
+          <button onClick={() => { setOpenPage("contact"); setHamburger(false); }}>Contact</button>
         </div>
 
       </div>
 
 
       {/* hero or the main page */}
+      {openPage === "home"  && 
       <div className="hero--section">
         <div className="img--hero">
           <img src={logo} alt="logo" />
@@ -142,7 +145,7 @@ const App = () => {
               contentData
               .filter(item => item.type === "recent-Achievements")
               .map(item => (
-                <div className="achieve--box">
+                <div className="achieve--box" key={item.id}>
                   <div className="achieve--icon">
                     <img src={item.Icon} alt="victory icon" />
                   </div>
@@ -158,6 +161,13 @@ const App = () => {
         </div>
             
       </div>
+}  
+
+    {/* 2nd page About section of the website */}
+    {
+      openPage === "about"  && 
+      <About />
+    }
     </div>
   )
 }
