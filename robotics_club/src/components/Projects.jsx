@@ -97,7 +97,6 @@ const Projects = () => {
                   </div>
                   <div className="members">
                     <h4>Team Members : </h4>
-                    
                   </div>
                   <ul>
                     {
@@ -106,7 +105,7 @@ const Projects = () => {
                       ))
                     }
                   </ul>
-                  {/* {
+                  {
                     activeProject.Achievement && (
                       <p className='achievement'>
                         <img src="./src/assets/icons/achievements.svg?react" alt="icon" />
@@ -115,7 +114,7 @@ const Projects = () => {
                         }
                       </p>
                     ) 
-                  } */}
+                  }
 
                 </motion.div>
               </>

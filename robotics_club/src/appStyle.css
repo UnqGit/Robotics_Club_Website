@@ -1469,6 +1469,8 @@ imgWrap--mono {
     width: 100%;
 }
 
+
+
 .imgWrap--mono img{
     width: 60%;
     border-radius: 12px;
@@ -1497,6 +1499,7 @@ imgWrap--mono {
     z-index: 9;
 }
 
+
 .pro--time {
     position: absolute;
     top: 40%;
@@ -1515,6 +1518,9 @@ imgWrap--mono {
     font-weight: 500;
     z-index: 9;
 }
+
+
+
 
 
 @media (max-width: 600px) {

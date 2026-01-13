@@ -7,6 +7,7 @@ import Group from "../src/assets/icons/about.svg?react"
 
 import About from './components/About';
 import Projects from './components/Projects';
+import Events from './components/Event';
 // import Event from './components/Event'
 
 const App = () => {
@@ -175,6 +176,11 @@ const App = () => {
     {
       openPage === "projects" && 
       <Projects />
+    }
+
+    {
+      openPage === "events" && 
+      <Events />
     }
 
     </div>
