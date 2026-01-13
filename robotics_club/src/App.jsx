@@ -6,6 +6,7 @@ import Events from "../src/assets/icons/events.svg?react"
 import Group from "../src/assets/icons/about.svg?react"
 
 import About from './components/About';
+import Projects from './components/Projects';
 // import Event from './components/Event'
 
 const App = () => {
@@ -168,6 +169,14 @@ const App = () => {
       openPage === "about"  && 
       <About />
     }
+
+    {/* #rd page Projects Section  */}
+
+    {
+      openPage === "projects" && 
+      <Projects />
+    }
+
     </div>
   )
 }

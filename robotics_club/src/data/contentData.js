@@ -1,19 +1,8 @@
-import  AboutUs  from "../assets/icons/about.svg?react"
-import  Projects  from "../assets/icons/project.svg?react"
-import  Events  from "../assets/icons/events.svg?react"
-import  Team  from "../assets/icons/team.svg?react"
-import  News  from "../assets/icons/news.svg?react"
-import  Achievements  from "../assets/icons/achievements.svg?react"
-import  Contact  from "../assets/icons/contact.svg?react"
-import Circle from "../assets/icons/industryCircle.svg?react"
-import Innovation from "../assets/icons/innovation.svg?react"
-
-
 const contentData = [
   {
     id: 1,
     type: "explore",
-    Icon: AboutUs,
+    Icon: "./src/assets/icons/about.svg?react",
     style: "aboutUs",
     title: "About Us",
     description: "Discover our mission and vision",
@@ -22,7 +11,7 @@ const contentData = [
   {
     id: 2,
     type: "explore",
-    Icon: Projects,
+    Icon: "./src/assets/icons/project.svg?react",
     style: "projects",
     title: "Projects",
     description: "Explore our innovative work",
@@ -31,7 +20,7 @@ const contentData = [
   {
     id: 3,
     type: "explore",
-    Icon: Events,
+    Icon: "./src/assets/icons/events.svg?react",
     style: "events",
     title: "Events",
     description: "Join upcoming workshops",
@@ -40,7 +29,7 @@ const contentData = [
   {
     id: 4,
     type: "explore",
-    Icon: Team,
+    Icon: "./src/assets/icons/team.svg?react",
     style: "teams",
     title: "Team",
     description: "Meet the innovators",
@@ -49,7 +38,7 @@ const contentData = [
   {
     id: 5,
     type: "explore",
-    Icon: News,
+    Icon: "./src/assets/icons/news.svg?react",
     style: "news",
     title: "News",
     description: "Robotics Club featured in newspaper.",
@@ -58,7 +47,7 @@ const contentData = [
   {
     id: 6,
     type: "explore",
-    Icon: Achievements,
+    Icon: "./src/assets/icons/achievements.svg?react",
     style: "achievements",
     title: "Achievements",
     description: "look what we had achieved",
@@ -67,7 +56,7 @@ const contentData = [
   {
     id: 7,
     type: "explore",
-    Icon: Contact,
+    Icon: "./src/assets/icons/contact.svg?react",
     style: "contact",
     title: "Contact",
     description: "get in touch with us",
@@ -76,7 +65,7 @@ const contentData = [
   {
     id: 8,
     type: "highlight",
-    Icon: Achievements,
+    Icon: "./src/assets/icons/achievements.svg?react",
     title: "National Robotics Championship",
     description: "Our autonomous drone was 1st place at the National Tech Fest 2025",
     time: "December 2025",
@@ -84,7 +73,7 @@ const contentData = [
   {
     id: 9,
     type: "highlight",
-    Icon: Projects,
+    Icon: "./src/assets/icons/project.svg?react",
     title: "AI-Powered Sorting Robot",
     description: "Developed an intelligent waste management system using computer vision",
     time: "Ongoing Project",
@@ -92,7 +81,7 @@ const contentData = [
   {
     id: 10,
     type: "highlight",
-    Icon: Circle,
+    Icon: "./src/assets/icons/industryCircle.svg?react",
     title: "Industry Workshop Series",
     description: "Monthly workshops with leading robotics companies and researcheers",
     time: "Every Month",
@@ -100,7 +89,7 @@ const contentData = [
   {
     id: 11,
     type: "highlight",
-    Icon: Innovation,
+    Icon: "./src/assets/icons/innovation.svg?react",
     title: "Best Innovation Award",
     description: "Recognition for our IoT-enabled agricultural monitoring robot",
     time: "November 2025",
@@ -108,7 +97,7 @@ const contentData = [
   {
     id: 12,
     type: "recent-Achievements",
-    Icon: Achievements,
+    Icon: "./src/assets/icons/achievements.svg?react",
     time: "January 2026",
     title: "IEEE International Robotics Competition - 2nd Place",
     description: "Our team secured second place with an advanced obstacle-avoiding robot using LIDAR and ML algorithms"
@@ -116,7 +105,7 @@ const contentData = [
   {
     id: 13,
     type: "recent-Achievements",
-    Icon: Achievements,
+    Icon: "./src/assets/icons/achievements.svg?react",
     time: "December 2025",
     title: "Smart City Hackathon Winners",
     description: "Developed an IoT based traffic management system using swarm robotics principles."
@@ -124,59 +113,182 @@ const contentData = [
   {
     id: 14,
     type: "info",
-    Icon: AboutUs,
+    Icon: "./src/assets/icons/about.svg?react",
     members: "150+",
     description: "Active Members"
   },
   {
     id: 15,
     type: "info",
-    Icon: Projects,
+    Icon: "./src/assets/icons/project.svg?react",
     members: "50+",
     description: "Projects Completed"
   },
   {
     id: 16,
     type: "info",
-    Icon: Innovation,
+    Icon: "./src/assets/icons/innovation.svg?react",
     members: "23+",
     description: "Awards Won"
   },
   {
     id: 17,
     type: "info",
-    Icon: Events,
-    members: "7+",
+    Icon: "./src/assets/icons/events.svg?react",
+    members: "9+",
     description: "Years Active"
   },
   {
     id: 18,
     type: "longtimeInfo",
-    Icon: Circle,
+    Icon: "./src/assets/icons/industryCircle.svg?react",
     title: "Our Mission",
-    description: "To enhance students technical skills by fostering hands-on learning in robotics, automation, electronics, and emerging technologies while promoting innovation and teamwork.",
+    description: ["To enhance students technical skills by fostering hands-on learning in robotics, automation, electronics, and emerging technologies while promoting innovation and teamwork.",]
   },
   {
     id: 19,
     type: "longtimeInfo",
-    Icon: Events,
+    Icon: "./src/assets/icons/events.svg?react",
     title: "Our Vision",
-    description: "To build a strong robotics culture at NIT Patna and beyond, empowering students across disciplines to innovate, collaborate, and create impactful technological solutions.",
+    description: ["To build a strong robotics culture at NIT Patna and beyond, empowering students across disciplines to innovate, collaborate, and create impactful technological solutions."],
   },
   {
     id: 20,
     type: "longtimeInfo",
-    Icon: Projects,
+    Icon: "./src/assets/icons/project.svg?react",
     title: "Our Objective",
     description: [
-      "To stimulate interest in robotics among students",
-      "To provide practical exposure through projects, workshops, and competitions",
-      "To encourage interdisciplinary collaboration and innovation",
-      "To represent the institute in technical events, hackathons, and ideathons",
-      "To make robotics accessible to a wider student community", 
+      " To stimulate interest in robotics among students",
+      " To provide practical exposure through projects, workshops, and competitions",
+      " To encourage interdisciplinary collaboration and innovation",
     ]
   },
-  
+  {
+    id: 21,
+    type: "focus",
+    Icon: "./src/assets/icons/cpu.svg?react",
+    title: "Robotics & Automation",
+    description: "Designing and building autonomous robots for various applications including industrial automation, home assistance, and research."
+  },
+  {
+    id: 22,
+    type: "focus",
+    Icon: "./src/assets/icons/project.svg?react",
+    title: "AI & Machine Learning",
+    description: "Implementing intelligent algorithms for computer vision, natural language processing, and analytics in robotics."
+  },
+  {
+    id: 23,
+    type: "focus",
+    Icon: "./src/assets/icons/cpu.svg?react",
+    title: "IoT & Embedded Systems",
+    description: "Creating connected devices and smart systems using microcontrollers, sensors, and wireless communication protocols."
+  },
+  {
+    id: 24,
+    type: "focus",
+    Icon: "./src/assets/icons/cpu.svg?react",
+    title: "Research & Innovation",
+    description: "Conducting cutting-edge research in emerging technologies and publishing papers in international conferences."
+  },
+  {
+    id: 25,
+    type: "facility",
+    Icon: "./src/assets/img/img1.jpeg",
+    title: "Main Laboratory",
+    description: "2000 sq feet dedicated workspace with modern equipment"
+  },
+  {
+    id: 26,
+    type: "facility",
+    Icon: "./src/assets/img/img1.jpeg",
+    title: "Workshop Area",
+    description: "Fully Equipped for hands-on project development"
+  },
+  {
+    id: 27,
+    type: "projects",
+    Icon: "./src/assets/img/projects_Img1.jpeg",
+    year: 2025,
+    title: "Autonomous Delivery Drone",
+    about: "Drone",
+    description: "Developed an autonomous delivery drone system capable of navigating complex urban environments. The drone uses GPS for waypoint navigation, ultrasonic sensors for altitude control, and a camera-based computer vision system for real-time obstacle detection and avoidance. Integrated with a mobile app for package tracking and delivery confirmation.",
+    technology: ["Arduino", "GPS"],
+    TeamMember : ["Alex Johnson", "Sarah cheng"],
+    Achievement: "1st Place at Regional Tech Competition",
+  },
+  {
+    id: 28,
+    type: "projects",
+    Icon: "./src/assets/img/projects_Img1.jpeg",
+    year: 2025,
+    title: "AI-Powered Robotic Arm",
+    about: "Drone",
+    description: "Developed an autonomous delivery drone system capable of navigating complex urban environments. The drone uses GPS for waypoint navigation, ultrasonic sensors for altitude control, and a camera-based computer vision system for real-time obstacle detection and avoidance. Integrated with a mobile app for package tracking and delivery confirmation.",
+    technology: ["Arduino", "GPS"],
+    TeamMember : ["Alex Johnson", "Sarah cheng"],
+    Achievement: "1st Place at Regional Tech Competition",
+  },
+  {
+    id: 29,
+    type: "projects",
+    Icon: "./src/assets/img/projects_Img1.jpeg",
+    year: 2025,
+    title: "Smart Agricultural Monitor",
+    about: "Drone",
+    description: "Developed an autonomous delivery drone system capable of navigating complex urban environments. The drone uses GPS for waypoint navigation, ultrasonic sensors for altitude control, and a camera-based computer vision system for real-time obstacle detection and avoidance. Integrated with a mobile app for package tracking and delivery confirmation.",
+    technology: ["Arduino", "GPS"],
+    TeamMember : ["Alex Johnson", "Sarah cheng"],
+    Achievement: "1st Place at Regional Tech Competition",
+  },
+  {
+    id: 30,
+    type: "projects",
+    Icon: "./src/assets/img/projects_Img1.jpeg",
+    year: 2025,
+    title: "Industrial Quality Inspector",
+    about: "Drone",
+    description: "Developed an autonomous delivery drone system capable of navigating complex urban environments. The drone uses GPS for waypoint navigation, ultrasonic sensors for altitude control, and a camera-based computer vision system for real-time obstacle detection and avoidance. Integrated with a mobile app for package tracking and delivery confirmation.",
+    technology: ["Arduino", "GPS"],
+    TeamMember : ["Alex Johnson", "Sarah cheng"],
+    Achievement: "1st Place at Regional Tech Competition",
+  },
+  // {
+  //   id: 28,
+  //   type: "projects",
+  //   Icon: "",
+  //   year: 2025,
+  //   title: "",
+  //   about: "",
+  //   description: "",
+  //   technology: ["Arduino", "GPS"],
+  //   TeamMember : ["Alex Johnson", "Sarah cheng"],
+  //   Achievement: "",
+  // },
+  // {
+  //   id: 29,
+  //   type: "projects",
+  //   Icon: "",
+  //   year: 2025,
+  //   title: "",
+  //   about: "",
+  //   description: "",
+  //   technology: ["Arduino", "GPS"],
+  //   TeamMember : ["Alex Johnson", "Sarah cheng"],
+  //   Achievement: "",
+  // },
+  // {
+  //   id: 30,
+  //   type: "projects",
+  //   Icon: "",
+  //   year: 2025,
+  //   title: "",
+  //   about: "AI",
+  //   description: "",
+  //   technology: ["Arduino", "GPS"],
+  //   TeamMember : ["Alex Johnson", "Sarah cheng"],
+  //   Achievement: "",
+  // },
 ];
 
 export default contentData;
