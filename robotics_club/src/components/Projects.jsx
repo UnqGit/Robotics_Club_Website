@@ -83,19 +83,22 @@ const Projects = () => {
                   >
                     ✕
                   </button>
-
-                  <img src={activeProject.Icon} alt="project--img" />
-                  <h2>{activeProject.title}</h2>
-                  <p>{activeProject.description}</p>
-
-                  <h4>Technologies</h4>
+                  <div className="imgWrap--mono">
+                    <img src={activeProject.Icon} alt="project--img" />
+                    <h2 className='pro--heading'>{activeProject.title}</h2>
+                    <span className='pro--time'>{activeProject.year}</span>
+                    <span className='pro--for'>{activeProject.about}</span>
+                  </div>
+                  <p className='pro--desc'>{activeProject.description}</p>
                   <div className="tech">
                     {activeProject.technology.map((tech, index) => (
                       <span key={index}>{tech}</span>
                     ))}
                   </div>
-
-                  <h4>Team Members</h4>
+                  <div className="members">
+                    <h4>Team Members : </h4>
+                    
+                  </div>
                   <ul>
                     {
                       activeProject.TeamMember.map((member, index) => (
@@ -103,8 +106,7 @@ const Projects = () => {
                       ))
                     }
                   </ul>
-
-                  {
+                  {/* {
                     activeProject.Achievement && (
                       <p className='achievement'>
                         <img src="./src/assets/icons/achievements.svg?react" alt="icon" />
@@ -113,7 +115,7 @@ const Projects = () => {
                         }
                       </p>
                     ) 
-                  }
+                  } */}
 
                 </motion.div>
               </>
