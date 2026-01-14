@@ -1,15 +1,12 @@
-import React from 'react'
 import '../appStyle.css'
 import contentData from '../data/contentData'
-// import AboutUs from '../assets/icons/about.svg?react'
-// import Projects from '../assets/icons/project.svg?react'
 
 const About = () => {
   return (
     <div className="about--ab">
       <div className="all--about">
         <h1>About Robotics Club</h1>
-        <p>Empowering students to innovative, create, and shape the future of teachnology through hands-on robotics and AI projects</p>
+        <p>Empowering students to innovative, create, and shape the future of technology through hands-on robotics and AI projects</p>
 
         <div className="about---container">
           {

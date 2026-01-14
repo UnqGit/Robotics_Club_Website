@@ -5,8 +5,7 @@ const Event = () => {
 
   const [filter, setFilter] = React.useState("All");
   const filteredEves = contentData
-    .filter(item => item.type === "events")
-    .filter(item => filter === "All" || item.filter === filter);
+    .filter(item => item.type === "events" && (filter === "All" || item.filter === filter))
 
   return (
     <div className='eve'>

@@ -84,7 +84,7 @@ const Projects = () => {
                     ✕
                   </button>
                   <div className="imgWrap--mono">
-                    <img src={activeProject.Icon} alt="project--img" />
+                    <img src={activeProject.Icon} alt="project--img" loading="lazy"/>
                     <h2 className='pro--heading'>{activeProject.title}</h2>
                     <span className='pro--time'>{activeProject.year}</span>
                     <span className='pro--for'>{activeProject.about}</span>
@@ -112,7 +112,7 @@ const Projects = () => {
                         <h2>Achievement : </h2>
                         <p className='achievement'>
                           <div className="achievement--icon--project">
-                            <img src="./src/assets/icons/achievements.svg?react" alt="icon" />
+                            <img src="./src/assets/icons/achievements.svg?react" alt="icon" loading="lazy"/>
                           </div>
                           {
                             activeProject.Achievement
