@@ -1,14 +1,10 @@
 import React from 'react'
-import logo from './assets/Robotics_logo.png'
 import './appStyle.css'
 import contentData from './data/contentData';
-import Events from "../src/assets/icons/events.svg?react"
-import Group from "../src/assets/icons/about.svg?react"
 
 import About from './components/About';
 import Projects from './components/Projects';
 import EventsPage from './components/Event';
-// import Event from './components/Event'
 
 const App = () => {
   const [openPage, setOpenPage] = React.useState("home");
@@ -20,7 +16,7 @@ const App = () => {
       <div className="navbar--nb">
 
         <div className="logo--point">
-          <img src={logo} alt="logo" />
+          <img src='./src/assets/Robotics_logo.png' alt="logo" />
           <h1>Robotics club</h1>
         </div>
         <div className="navigating--navbar">
@@ -64,7 +60,7 @@ const App = () => {
       {openPage === "home"  && 
       <div className="hero--section">
         <div className="img--hero">
-          <img src={logo} alt="logo" />
+          <img src='./src/assets/Robotics_logo.png' alt="logo" />
         </div>
         <h1>Robotics Club</h1>
         <p>Innovating Tomorrow Through Robotics, AI & Automation</p>
@@ -126,16 +122,16 @@ const App = () => {
             <p>Join us for a 3-day event features workshop, competitions, and keynotes speeches from industry leaders.</p>
             <p>Register now to secure your spot!</p>
             <div className="next--event--detail">
-              <img src={Events} alt="calender" />
+              <img src="./src/assets/icons/events.svg?react" alt="calender" />
               <p>March 15, 2026</p>
-              <img src={Group} alt='Gathering' />
+              <img src='./src/assets/icons/about.svg?react' alt='Gathering' />
               <p>500+ participants expected</p>
             </div>
             <button>View Details ➜</button>
           </div>
           </div>
           <div className="motion--box">
-            <img src={Events} alt="Next--Event" />
+            <img src="./src/assets/icons/events.svg?react" alt="Next--Event" />
           </div>
         </div>
 
