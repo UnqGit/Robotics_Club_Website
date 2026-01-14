@@ -1395,12 +1395,6 @@ li::marker {
     z-index: 20;
 }
 
-.pro--modal img {
-    width: 100%;
-    border-radius: 16px;
-    margin-bottom: 16px;
-}
-
 .pro--modal .close--btn {
     position: absolute;
     top: 16px;
@@ -1441,12 +1435,13 @@ li::marker {
 
 .pro--modal .tech span {
     padding: 8px;
-    background-color: #8aa6c5;
+    background: linear-gradient(to right, rgb(80, 208, 255), rgb(133, 81, 247));
     margin: 8px;
     color: white;
     border-radius: 8px;
     font-family: 'Inter', sans-serif;
 }
+
 
 .pro--modal h4 {
     color: white;
@@ -1455,21 +1450,89 @@ li::marker {
 }
 
 .achievement {
-    position: fixed;
-    top: 20px;
-    right: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
-.pro--modal .achievement img {
-    width: 60px;
+
+.achievement--icon--project {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #516e6f;
+    border-radius: 12px;
+    box-shadow:
+        0 6px 15px rgba(30, 202, 211, 0.35),
+        inset 0 0 8px rgba(255, 255, 255, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    margin: 0 30px 20px 10px;
 }
+
+.achievement--icon--project img{
+    width: 22px;
+    height: 22px;
+    margin-top: 15px;
+    stroke-width: 1.5;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.achievement--icon--project img:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(30, 202, 211, 0.5);
+}
+
 
 imgWrap--mono {
     position: relative;
     width: 100%;
 }
 
+.pro--modal .members {
+    display: flex;
+    color: white;
+    font-size: large;
+    align-items: center;
+}
 
+.pro--modal .members h4{
+    margin: 10px 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pro--modal .members ul {
+    list-style: none;
+    display: flex;
+}
+
+.pro--modal .members ul li {
+    margin: 10px;
+    padding: 12px;
+    border: 1px solid green;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(232, 168, 168), orange);
+}
+
+.pro--modal .achievement--pro {
+    width: 100%;
+    height: fit-content;
+    margin-top: 20px;
+    background-color: #0d163c;
+}
+
+.pro--modal .achievement--pro h2 {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    justify-self: center;
+    align-self: flex-start;
+    padding: 10px;
+}
 
 .imgWrap--mono img{
     width: 60%;
@@ -1503,7 +1566,7 @@ imgWrap--mono {
 .pro--time {
     position: absolute;
     top: 40%;
-    left: 35%;     /* LEFT CORNER (as you wanted) */
+    right: 25%;     /* LEFT CORNER (as you wanted) */
 
     background: linear-gradient(to top, green, rgb(238, 0, 255));
     backdrop-filter: blur(6px);
@@ -1521,12 +1584,232 @@ imgWrap--mono {
 
 
 
-
-
 @media (max-width: 600px) {
      .pro--modal {
         width: 95vw;
         padding: 20px;
         border-radius: 18px;
      }
+}
+
+
+
+/* -----  Events Section Styling ----- */
+
+.eve{
+    width: 100%;
+}
+
+.eve .eve--block {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.eve .eve--block h1,h2 {
+    font-size: 3rem;
+    margin: 25px;
+    margin-top: 80px;
+    color: #00aeff;
+    text-shadow:
+        0 0 1px #00ffff,
+        0 0 1px #00ffff;
+    font-family: 'Poppins', sans-serif;
+}
+.eve .eve--block p {
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
+    margin: 15px 10px;
+    color: #E0E0E0;
+}
+
+.eve .eve--block .filter--events {
+    width: 60%;
+    display: flex;
+    justify-self: center;
+    justify-content: space-evenly;
+}
+
+.eve .eve--block .filter--events button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    margin: 0px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(78, 78, 247), rgb(16, 118, 214));
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+.eve .eve--block .filter--events button:hover{
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(30, 202, 211, 0.5);
+}
+
+.eve .eve--block .eve--mapping {
+    margin: 0px;
+    width: 100%;
+    /* border: 3px solid red; */
+    justify-items: center;
+}
+
+.eve .eve--block .eve--mapping .eve--head {
+    justify-self: start;
+}
+
+.eve .eve--block .eve--mapping .small--eve {
+    font-size: 2rem;
+}
+
+.events--eve--section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    /* border: 3px solid blue; */
+}
+
+.events--eve--section .filteringEvents {
+    display: flex;
+    /* flex-direction: column; */
+    width: 85%;
+    border: 1px solid blueviolet;
+    /* background: linear-gradient(to bottom, rgb(181, 233, 253) 3%, rgb(165, 166, 252)); */
+    padding: 20px 30px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.events--eve--section .filteringEvents img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.events--eve--section .filteringEvents .top--eve {
+    /* width: 60%; */
+    margin-left: 20px;
+}
+
+.events--eve--section .filteringEvents .top--eve .filter--eve--icon {
+    width: fit-content;
+    height: fit-content;
+}
+.events--eve--section .filteringEvents .top--eve .filter--eve--icon p {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(78, 78, 247), rgb(7, 122, 230));
+}
+
+.events--eve--section .filteringEvents .top--eve h3 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    margin-left: 14px;
+}
+.events--eve--section .filteringEvents .top--eve .eve--descript {
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: rgb(157, 157, 157);
+}
+
+.events--eve--section .filteringEvents .bottom--eve {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* border: 2px solid yellow; */
+    width: 90%;
+    align-self: center;
+    gap: 10px 30px;
+    margin-left: 20px;
+}
+
+.events--eve--section .filteringEvents .bottom--eve .option {
+    display: flex;
+    align-items: center;
+}
+
+.events--eve--section .filteringEvents .bottom--eve .option .option--icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #516e6f;
+    border-radius: 12px;
+    box-shadow:
+        0 6px 15px rgba(30, 202, 211, 0.35),
+        inset 0 0 8px rgba(255, 255, 255, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.events--eve--section .filteringEvents .bottom--eve .option .option--icon img {
+    width: 22px;
+    height: 22px;
+    stroke-width: 1.5;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+.events--eve--section .filteringEvents .bottom--eve .option .option--icon img:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(30, 202, 211, 0.5);
+}
+
+.events--eve--section .filteringEvents .bottom--eve .option .option--desc {
+    /* border: 2px solid cyan; */
+    text-align: start;
+    margin-left: 10px;
+    text-indent: 10px;
+}
+
+.events--eve--section .filteringEvents .bottom--eve .option .option--desc span{
+    color: gray;
+    margin-top: 20px;
+}
+
+.events--eve--section .filteringEvents .bottom--eve .option .option--desc .event--value {
+    font-size: small;
+    margin: 3px 0px;
+    font-weight: bold;
+}
+
+@media (max-width : 768px) {
+    .events--eve--section .filteringEvents {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .eve .eve--block .filter--events {
+        width: 100%;
+        margin: 0px;
+
+    }
+    .eve .eve--block .filter--events button {
+        margin: 3px;
+        width: 25%;
+    }
+}
+
+.events--eve--section .no--events {
+    width: 100%;
+    text-align: center;
+    height: 30vh;
+}
+
+.events--eve--section .no--events h3 {
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }

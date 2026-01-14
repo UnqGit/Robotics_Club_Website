@@ -89,6 +89,7 @@ const Projects = () => {
                     <span className='pro--time'>{activeProject.year}</span>
                     <span className='pro--for'>{activeProject.about}</span>
                   </div>
+                  <h3>Project Description : </h3>
                   <p className='pro--desc'>{activeProject.description}</p>
                   <div className="tech">
                     {activeProject.technology.map((tech, index) => (
@@ -97,22 +98,27 @@ const Projects = () => {
                   </div>
                   <div className="members">
                     <h4>Team Members : </h4>
+                    <ul>
+                      {
+                        activeProject.TeamMember.map((member, index) => (
+                          <li key={index}>{member}</li>
+                        ))
+                      }
+                    </ul>
                   </div>
-                  <ul>
-                    {
-                      activeProject.TeamMember.map((member, index) => (
-                        <li key={index}>{member}</li>
-                      ))
-                    }
-                  </ul>
                   {
                     activeProject.Achievement && (
-                      <p className='achievement'>
-                        <img src="./src/assets/icons/achievements.svg?react" alt="icon" />
-                        {
-                          activeProject.Achievement
-                        }
-                      </p>
+                      <div className="achievement--pro">
+                        <h2>Achievement : </h2>
+                        <p className='achievement'>
+                          <div className="achievement--icon--project">
+                            <img src="./src/assets/icons/achievements.svg?react" alt="icon" />
+                          </div>
+                          {
+                            activeProject.Achievement
+                          }
+                        </p>
+                      </div>
                     ) 
                   }
 
