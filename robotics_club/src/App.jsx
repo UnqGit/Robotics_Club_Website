@@ -1,17 +1,28 @@
 import React from 'react'
 import './appStyle.css'
-import contentData from './data/contentData';
+import contentData from './data/contentData'
 
-import About from './components/About';
-import Projects from './components/Projects';
-import EventsPage from './components/Event';
+import About from './components/About'
+import Projects from './components/Projects'
+import Events from './components/Event'
+import Achievements from './components/Achievements'
+import Contact from './components/Contact'
+import News from './components/News'
+import Teams from './components/Teams'
 
 const App = () => {
   const [openPage, setOpenPage] = React.useState("home");
   const [hamburger, setHamburger] = React.useState(false);
 
+  const handleMobileNav = (page) => {
+    setOpenPage(page);
+    setHamburger(false);
+  };
+
+
   return (
     <div className='main--container--mn'>
+
       {/* The Navbar section */}
       <div className="navbar--nb">
 
@@ -31,7 +42,6 @@ const App = () => {
         </div>
 
         {/* Humberger */}
-
         <button
           className={`hamburger ${hamburger ? "isOpen" : ""}`}
           onClick={() => setHamburger(prev => !prev)}
@@ -42,15 +52,15 @@ const App = () => {
           <span></span>
         </button>
 
-        <div className={`mobile-menu ${hamburger ? "show" : ""}`} onClick={() => setHamburger(prev => !prev)}>
-          <button onClick={() => { setOpenPage("home"); setHamburger(false); }}>Home</button>
-          <button onClick={() => { setOpenPage("about"); setHamburger(false); }}>About</button>
-          <button onClick={() => { setOpenPage("projects"); setHamburger(false); }}>Projects</button>
-          <button onClick={() => { setOpenPage("events"); setHamburger(false); }}>Events</button>
-          <button onClick={() => { setOpenPage("teams"); setHamburger(false); }}>Teams</button>
-          <button onClick={() => { setOpenPage("news"); setHamburger(false); }}>News</button>
-          <button onClick={() => { setOpenPage("achievement"); setHamburger(false); }}>Achievements</button>
-          <button onClick={() => { setOpenPage("contact"); setHamburger(false); }}>Contact</button>
+        <div className={`mobile-menu ${hamburger ? "show" : ""}`}>
+          <button onClick={() => handleMobileNav("home")}>Home</button>
+          <button onClick={() => handleMobileNav(("about"))}>About</button>
+          <button onClick={() => handleMobileNav(("projects"))}>Projects</button>
+          <button onClick={() => handleMobileNav(("events"))}>Events</button>
+          <button onClick={() => handleMobileNav(("teams"))}>Teams</button>
+          <button onClick={() => handleMobileNav(("news"))}>News</button>
+          <button onClick={() => handleMobileNav(("achievement"))}>Achievements</button>
+          <button onClick={() => handleMobileNav(("contact"))}>Contact</button>
         </div>
 
       </div>
@@ -167,26 +177,40 @@ const App = () => {
         <About />
       }
 
-      {/* #rd page Projects Section  */}
-
+      {/* 3rd page Projects Section of the website */}
       {
         openPage === "projects" &&
         <Projects />
       }
 
+      {/* 4th page Events section of the website */}
       {
         openPage === "events" &&
-        <EventsPage />
+        <Events />
       }
 
+      {/* 5th page Teams section of the website */}
       {
         openPage === "teams" &&
         <Teams />
       }
 
+      {/* 6th page Contact section of the website */}
       {
         openPage === "contact" &&
         <Contact />
+      }
+
+      {/* 7th page Achievements section of the website */}
+      {
+        openPage === "achievements" &&
+        <Achievements />
+      }
+
+      {/* 8th page News section of the website */}
+      {
+        openPage === "news" &&
+        <News />
       }
 
     </div>
