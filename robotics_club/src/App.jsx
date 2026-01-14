@@ -10,6 +10,8 @@ import Projects from './components/Projects';
 import EventsPage from './components/Event';
 import Teams from './components/Teams';
 import Contact from './components/Contact';
+import News from './components/News';
+import Achievements from './components/Achievements';
 
 const App = () => {
   const [openPage, setOpenPage] = React.useState("home");
@@ -192,6 +194,16 @@ const App = () => {
       {
         openPage === "contact" &&
         <Contact />
+      }
+
+      {
+        openPage === "news"  && 
+        <News />
+      }
+
+      {
+        openPage === "achievement"  &&
+        <Achievements />
       }
 
     </div>
