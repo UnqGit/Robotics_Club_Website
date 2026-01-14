@@ -70,47 +70,47 @@ const App = () => {
           <button className='upcoming--events'>Upcoming Events</button>
         </div>
 
-        <div className="club--ideas">
-          <h1>Explore Our Club</h1>
-          <p>Navigate through different sections to discover what we do ans how you can be part of our journey</p>
-          <div className="club--highlights">
-            {
-              contentData
-                .filter(item => item.type === "explore")
-                .map(item => (
-                  <div className="highlights" key={item.id}>
-                    <div className={`icon--box ${item.style}`}>
-                      <img src={item.Icon} alt={`${item.title} icon`} />
+          <div className="club--ideas">
+            <h1>Explore Our Club</h1>
+            <p>Navigate through different sections to discover what we do ans how you can be part of our journey</p>
+            <div className="club--highlights">
+              {
+                contentData
+                  .filter(item => item.type === "explore")
+                  .map(item => (
+                    <div className="highlights" key={item.id}>
+                      <div className={`icon--box ${item.style}`}>
+                        <img src={item.Icon} alt={`${item.title} icon`} />
+                      </div>
+                      <h1>{item.title}</h1>
+                      <p>{item.description}</p>
+                      <button>{item.btnText}</button>
                     </div>
-                    <h1>{item.title}</h1>
-                    <p>{item.description}</p>
-                    <button>{item.btnText}</button>
-                  </div>
-                ))
-            }
+                  ))
+              }
+            </div>
           </div>
-        </div>
 
-        <div className="club--highlight">
-          <h1>Club Highlights</h1>
-          <p>Latest competitions, ongoing workshops, and innovative projects</p>
-          <div className="highlight--boxes">
-            {
-              contentData
-              .filter(item => item.type === "highlight")
-              .map(item => (
-                <div className="highlights" key={item.id}>
-                  <div className={`highlight--icon`}>
-                    <img src={item.Icon} alt='highlight Icon' />
-                  </div>
-                  <h1>{item.title}</h1>
-                  <p>{item.description}</p>
-                  <span className='highlight--time'>{item.time}</span>
-                </div>
-              ))
-            }
+          <div className="club--highlight">
+            <h1>Club Highlights</h1>
+            <p>Latest competitions, ongoing workshops, and innovative projects</p>
+            <div className="highlight--boxes">
+              {
+                contentData
+                  .filter(item => item.type === "highlight")
+                  .map(item => (
+                    <div className="highlights" key={item.id}>
+                      <div className={`highlight--icon`}>
+                        <img src={item.Icon} alt='highlight Icon' />
+                      </div>
+                      <h1>{item.title}</h1>
+                      <p>{item.description}</p>
+                      <span className='highlight--time'>{item.time}</span>
+                    </div>
+                  ))
+              }
+            </div>
           </div>
-        </div>
 
         <div className="main--event">
           <div className="event--inside">
@@ -135,49 +135,59 @@ const App = () => {
           </div>
         </div>
 
-        <div className="recent--achievements">
-          <h1>Recent Achievements</h1>
-          <p>Celebrating our latest wins and recognitions</p>
-          <div className="achievements">
-            {
-              contentData
-              .filter(item => item.type === "recent-Achievements")
-              .map(item => (
-                <div className="achieve--box" key={item.id}>
-                  <div className="achieve--icon">
-                    <img src={item.Icon} alt="victory icon" />
-                  </div>
-                  <div className="achieve--info">
-                    <p className='achieve--time'>{item.time}</p>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
-                </div>
-              ))
-            }
+          <div className="recent--achievements">
+            <h1>Recent Achievements</h1>
+            <p>Celebrating our latest wins and recognitions</p>
+            <div className="achievements">
+              {
+                contentData
+                  .filter(item => item.type === "recent-Achievements")
+                  .map(item => (
+                    <div className="achieve--box" key={item.id}>
+                      <div className="achieve--icon">
+                        <img src={item.Icon} alt="victory icon" />
+                      </div>
+                      <div className="achieve--info">
+                        <p className='achieve--time'>{item.time}</p>
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                      </div>
+                    </div>
+                  ))
+              }
+            </div>
           </div>
+
         </div>
-            
-      </div>
-}  
+      }
 
-    {/* 2nd page About section of the website */}
-    {
-      openPage === "about"  && 
-      <About />
-    }
+      {/* 2nd page About section of the website */}
+      {
+        openPage === "about" &&
+        <About />
+      }
 
-    {/* #rd page Projects Section  */}
+      {/* #rd page Projects Section  */}
 
-    {
-      openPage === "projects" && 
-      <Projects />
-    }
+      {
+        openPage === "projects" &&
+        <Projects />
+      }
 
-    {
-      openPage === "events" && 
-      <EventsPage />
-    }
+      {
+        openPage === "events" &&
+        <EventsPage />
+      }
+
+      {
+        openPage === "teams" &&
+        <Teams />
+      }
+
+      {
+        openPage === "contact" &&
+        <Contact />
+      }
 
     </div>
   )
