@@ -1,11 +1,12 @@
 import contentData from "../data/contentData";
+import logo  from "../assets/Robotics_logo.png"
 
 const Home = () => {
     {/* hero or the main page */}
     return (
         <div className="hero--section">
             <div className="img--hero">
-            <img src='./src/assets/Robotics_logo.png' alt="logo" />
+            <img src={logo} alt="logo" />
             </div>
             <h1>Robotics Club</h1>
             <p>Innovating Tomorrow Through Robotics, AI & Automation</p>
@@ -17,7 +18,7 @@ const Home = () => {
 
             <div className="club--ideas">
                 <h1>Explore Our Club</h1>
-                <p>Navigate through different sections to discover what we do ans how you can be part of our journey</p>
+                <p>Navigate through different sections to discover what we do and how you can be part of our journey</p>
                 <div className="club--highlights">
                 {
                     contentData

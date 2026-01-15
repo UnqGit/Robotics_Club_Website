@@ -24,8 +24,8 @@ const Event = () => {
 
         <div className="eve--mapping">
           <div className="eve--head">
-            <h2 className='small--eve'>Upcoming Events</h2>
-            <p>Register now to secure your spot in these exciting events</p>
+            <h2 className='small--eve'>Upcoming Events :<span className='choosen--event'> {filter} </span></h2>
+            <p className='event-p'>Register now to secure your spot in these exciting events</p>
           </div>
           <div className="events--eve--section">
             {filteredEves.length === 0 ? (

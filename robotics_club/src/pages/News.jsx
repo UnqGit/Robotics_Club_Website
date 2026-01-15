@@ -1,7 +1,7 @@
 import React from 'react'
 import '../appStyle.css'
 import contentData from '../data/contentData'
-import calender from '../assets/icons/events.svg?react'
+import calendar from '../assets/icons/events.svg?react'
 
 const News = () => {
   {/* News section of the website */}
@@ -26,7 +26,7 @@ const News = () => {
                 </div>
                 <div className="data--time">
                   <div className="news--icon">
-                    <img src={calender} alt="icon" />
+                    <img src={calendar} alt="icon" />
                   </div>
                   <span>{item.date}</span>
                 </div>
@@ -40,11 +40,7 @@ const News = () => {
           }
         </div>
         <h2>PAST NEWS</h2>
-        <p>Stay updated with the past acheivement.events.ande innovations from our robotics club</p>
-
-        
-
-
+        <p>Stay updated with the past acheivement,events,and innovations.</p>
       </div>
     </div>
   )

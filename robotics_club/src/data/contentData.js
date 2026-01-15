@@ -345,7 +345,7 @@ const contentData = [
     type: "events",
     Image: "./src/assets/img/eve5arduinojam.webp",
     Icon: "./src/assets/icons/cpu.svg?react",
-    filter: "SocialEvent",
+    filter: "Social Event",
     title: "Arduino Jam",
     description: "An amazing learning session for students on Arduino. Introduction to Arduino, setting up the software and working with Arduino ide, and a brief intro on sensors and their working. Students will also get a proper training how they can design and simulate circuits on their own.",
     date: "February 20, 2026",
@@ -387,6 +387,7 @@ const contentData = [
     filter: "SocialEvent",
     title: "Digital Detective",
     description: "It is basically a treasure hunt type event, but not the usual one, as it will have a technical kick. A 24 hours event full of mind wobbling passcode encrypted Riddles.This way the participant would have to solve some riddles and the one who would be able to crack all the riddles the fastest, would be our winner.",
+    date: "February 20, 2026",
     time: "2:00 PM - 5:00 PM",
     venue: "Robotics Lab, Room 204",
     participants: "50+ participants",
@@ -394,7 +395,7 @@ const contentData = [
   {
     id: 42,
     type: "events",
-    Image: "./src/assets/img/nexthostage.png",
+    Image: "./src/assets/img/nexthostage.jpg",
     Icon: "./src/assets/icons/cpu.svg?react",
     filter: "SocialEvent",
     title: "The Next Hokage",
@@ -594,14 +595,14 @@ const contentData = [
     id: 66,
     type: "teams",
     name: "Anjali Raj",
-    Image: "./src/assets/img/anajli12.jpg",
+    Image: "./src/assets/img/anajali12.jpg",
     position:"Graphics and Design Lead",
   },
   {
     id: 67,
     type: "teams",
     name: "Lipi Aditi",
-    Image: "./src/assets/img/lipiadit13.jpg",
+    Image: "./src/assets/img/lipiaditi13.jpg",
     position:"Web Lead",
   },
   {
@@ -646,7 +647,6 @@ const contentData = [
     Image: "./src/assets/img/khusi19.jpg",
     position:"3D Modelling and CAD Lead",
   },
- 
   {
     id: 74,
     type: "teams",
@@ -654,6 +654,52 @@ const contentData = [
     Image: "./src/assets/img/krishna20.jpg",
     position:"Videography and Media Lead",
   },
+  {
+    id: 75,
+    type: "achieve",
+    Image: "./src/assets/icons/events.svg?react",
+    number: "25+",
+    description: "Total Awards",
+  },
+  {
+    id: 76,
+    type: "achieve",
+    Image: "./src/assets/icons/events.svg?react",
+    number: "25+",
+    description: "Total Awards",
+  },
+  {
+    id: 77,
+    type: "achieve",
+    Image: "./src/assets/icons/events.svg?react",
+    number: "25+",
+    description: "Total Awards",
+  },
+  {
+    id: 78,
+    type: "achieve",
+    Image: "./src/assets/icons/events.svg?react",
+    number: "25+",
+    description: "Total Awards",
+  },
+  {
+    id: 79,
+    type: "coreTeam",
+    Image: "./src/assets/img/PI.jpeg",
+    name: "Dr. Gagandeep Meena",
+    position: "Pofessor Incharge",
+    department: "Electrical",
+    description: "Robotics is not just about building machines; it's about creating intelligent systems that enhance human capabilities and solve real-world problems. I'm proud to mentor these brilliant minds shaping the future.",
+   },
+  {
+    id: 80,
+    type: "coreTeam",
+    Image: "./src/assets/img/BharatGupta.png",
+    name: "Dr. Bharat Gupta",
+    position: "Faculty Advisor",
+    department: "Electronics and Commuication",
+    description: "Robotics is not just about building machines; it's about creating intelligent systems that enhance human capabilities and solve real-world problems. I'm proud to mentor these brilliant minds shaping the future.",
+   },
  
 ];
 

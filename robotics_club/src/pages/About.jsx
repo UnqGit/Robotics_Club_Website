@@ -7,14 +7,14 @@ const About = () => {
     <div className="about--ab">
       <div className="all--about">
         <h1>About Robotics Club</h1>
-        <p>Empowering students to innovative, create, and shape the future of technology through hands-on robotics and AI projects</p>
+        <p>Empowering students to innovate, create, and shape the future of technology through hands-on robotics and AI projects</p>
 
         <div className="about---container">
           {
             contentData
             .filter(item => item.type === "info")
             .map(item => (
-              <div className="about--box">
+              <div className="about--box" key={item.id}>
                 <div className="about--icons">
                   <img src={item.Icon} alt="icon" />
                 </div>
@@ -30,7 +30,7 @@ const About = () => {
             contentData
             .filter(item => item.type === "longtimeInfo")
             .map(item => (
-              <div className="longInfo">
+              <div className="longInfo" key={item.id}>
                 <div className="longInfo__icon">
                   <img src={item.Icon} alt="logo" />
                 </div>
@@ -59,7 +59,7 @@ const About = () => {
                 contentData
                 .filter(item => item.type === "focus")
                 .map(item => (
-                  <div className="focus--box">
+                  <div className="focus--box" key={item.id}>
                     <div className="focus--icon">
                       <img src={item.Icon} alt="logo" />
                     </div>
@@ -95,7 +95,7 @@ const About = () => {
               {
                 contentData.filter(item => item.type === "facility")
                 .map(item => (
-                  <div className="resource--img">
+                  <div className="resource--img" key={item.id}>
                     <img src={item.Icon} alt="logo" />
                     <div className="img--desc">
                       <h2>{item.title}</h2>

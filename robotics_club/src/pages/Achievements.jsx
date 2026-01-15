@@ -6,7 +6,7 @@ const Achievements = () => {
   return (
     <div className='achievement--section'>
         <div className="achieve--am">
-          <h1>Oue Achievements</h1>
+          <h1>Our Achievements</h1>
           <p>Celebrating excellence, innovation, and dedication in robotics</p>
 
           <div className="achieve--data">
@@ -14,8 +14,10 @@ const Achievements = () => {
               contentData
               .filter(item => item.type === "achieve")
               .map(item => (
-                <div className="achieve--area">
-                  <img src='./src/assests/icon/'/>
+                <div className="achieve--area" id={item.id}>
+                  <img src={item.Image}/>
+                  <h2>{item.number}</h2>
+                  <p>{item.description}</p>
                 </div>
               ))
             }

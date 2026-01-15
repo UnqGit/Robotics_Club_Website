@@ -9,22 +9,21 @@ const Teams = () => {
       <p className="paragraph">The brilliant minds behind our innovations and achievements</p>
 
       <section className="faculty-section">
-        <h2>Professor Incharge</h2>
+        {
+          contentData
+          .filter(item => item.type === "coreTeam")
+          .map(item => (
         <div className="faculty-card">
           <div className="faculty-profile-img">
-            <img src="./assets/PI.jpeg" alt="Professor Incharge" />
+            <img src={item.Image} alt="Professor Incharge" />
           </div>
           <div className="faculty-content">
-            <h2 className="faculty-name">Dr. Gagandeep Meena</h2>
-            <p className="faculty-role">Professor Incharge</p>
-            <p className="faculty-dept">Department of Electrical Engineering</p>
+            <h2 className="faculty-name">{item.name}</h2>
+            <p className="faculty-role">{item.position}</p>
+            <p className="faculty-dept">{item.department}</p>
 
             <div className="faculty-quote-box">
-              <p>
-                "Robotics is not just about building machines; it's about creating intelligent systems
-                that enhance human capabilities and solve real-world problems.
-                I'm proud to mentor these brilliant minds shaping the future."
-              </p>
+              <p>{item.description}</p>
             </div>
 
             <div className="faculty-socials">
@@ -33,31 +32,8 @@ const Teams = () => {
             </div>
           </div>
         </div>
-
-        <h2>Faculty Advisor</h2>
-        <div className="faculty-card">
-          <div className="faculty-profile-img">
-            <img src="./assets/faculty_advisor.png" alt="Faculty Advisor" />
-          </div>
-          <div className="faculty-content">
-            <h2 className="faculty-name">Dr. Bharat Gupta</h2>
-            <p className="faculty-role">Faculty Advisor</p>
-            <p className="faculty-dept">Department of Electronics and Communication</p>
-
-            <div className="faculty-quote-box">
-              <p>
-                "Robotics is not just about building machines; it's about creating intelligent systems
-                that enhance human capabilities and solve real-world problems.
-                I'm proud to mentor these brilliant minds shaping the future."
-              </p>
-            </div>
-
-            <div className="faculty-socials">
-              <a href="#" aria-label="Email"><i className="fa-regular fa-envelope"></i></a>
-              <a href="#" aria-label="LinkedIn"><i className="fa-brands fa-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
+          ))
+        }
       </section>
 
       <h1 className="main-heading">Core Team / Office Bearers</h1>
@@ -69,7 +45,7 @@ const Teams = () => {
               contentData
               .filter(item => item.type === "teams")
               .map(item => (
-            <div className="core-team-card">
+            <div className="core-team-card" key={item.id}>
               <div className="core-team-image">
                 <img src={item.Image} alt="President" />
               </div>

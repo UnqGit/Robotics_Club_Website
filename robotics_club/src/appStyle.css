@@ -141,6 +141,7 @@ body {
     border: none;
     flex-direction: column;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .hamburger span {
@@ -1502,7 +1503,7 @@ li::marker {
 }
 
 
-imgWrap--mono {
+.imgWrap--mono {
     position: relative;
     width: 100%;
 }
@@ -1639,12 +1640,23 @@ imgWrap--mono {
     color: #E0E0E0;
 }
 
+.eve .eve--block .small--eve{
+    margin-left: 25%;
+}
+
+.eve .eve--block .event-p {
+    margin-left: 25%;
+    width: 100%;
+}
+
 .eve .eve--block .filter--events {
     width: 60%;
     display: flex;
     justify-self: center;
     justify-content: space-evenly;
 }
+
+
 
 .eve .eve--block .filter--events button {
     padding: 8px 15px;
@@ -1664,6 +1676,18 @@ imgWrap--mono {
     box-shadow: 0 12px 25px rgba(30, 202, 211, 0.5);
 }
 
+
+
+@media (max-width : 768px) {
+    .eve .eve--block .filter--events {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .eve .eve--block .filter--events button {
+        padding: 5px;
+    }
+}
+
 .eve .eve--block .eve--mapping {
     margin: 0px;
     width: 100%;
@@ -1679,12 +1703,24 @@ imgWrap--mono {
     font-size: 2rem;
 }
 
+.eve .eve--block .eve--mapping .small--eve {
+    width: 100%;
+}
+
+.eve .eve--block .eve--mapping .small--eve .choosen--event {
+    color: white;
+}
+
 .events--eve--section {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
     /* border: 3px solid blue; */
+}
+
+.eve .eve--block .filter--events .clicked {
+    background: blueviolet;
 }
 
 .events--eve--section .filteringEvents {
@@ -1701,8 +1737,16 @@ imgWrap--mono {
 
 .events--eve--section .filteringEvents img {
     width: 40%;
+    height: 300px;
     border-radius: 10px;
 }
+
+@media (max-width : 768px) {
+    .events--eve--section .filteringEvents img {
+        width: 70%;
+    }
+}
+
 
 .events--eve--section .filteringEvents .top--eve {
     /* width: 60%; */
@@ -2594,4 +2638,72 @@ imgWrap--mono {
     color: #E0E0E0;
     justify-content: center;
     justify-items: center;
+}
+
+.footer--container {
+    display: flex;
+    width: 100%;
+}
+
+.footer--container .Navbar {
+    width: 30%;
+    margin: 10px 20px;
+}
+
+.footer--container .Navbar h3 {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #00c6ff;
+    margin: 10px;
+}
+
+.footer--container .Navbar p {
+    font-size: 1rem;
+    font-family: 'Inter', sans;
+    margin: 0px auto 10px 10px;
+    color: gray;
+}
+
+.footer--container .Navbar .footer--icon {
+    display: flex;
+    margin: 10px;
+}
+
+.footer--container .Navbar .footer--icon i {
+    margin: 5px;
+}
+
+.footer--container .quick--link {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 26px 0px;
+    align-items: center;
+}
+
+.footer--container p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer--container  button {
+    border: none;
+    color: white;
+    width: fit-content;
+    background: transparent;
+    margin: 8px auto;
+    font-weight: bold;
+}
+
+.footer--container .resources--link {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 26px 0px;
+    align-items: center;
+}
+
+.footer--container .contact--info {
+    
 }
