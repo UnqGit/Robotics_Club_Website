@@ -65,6 +65,7 @@ const contentData = [
   {
     id: 8,
     type: "highlight",
+    style: "achievement",
     Icon: "./src/assets/icons/achievements.svg?react",
     title: "National Robotics Championship",
     description: "Our autonomous drone was 1st place at the National Tech Fest 2025",
@@ -73,6 +74,7 @@ const contentData = [
   {
     id: 9,
     type: "highlight",
+    style: "project",
     Icon: "./src/assets/icons/project.svg?react",
     title: "AI-Powered Sorting Robot",
     description: "Developed an intelligent waste management system using computer vision",
@@ -81,6 +83,7 @@ const contentData = [
   {
     id: 10,
     type: "highlight",
+    style: "industryCircle",
     Icon: "./src/assets/icons/industryCircle.svg?react",
     title: "Industry Workshop Series",
     description: "Monthly workshops with leading robotics companies and researcheers",
@@ -89,6 +92,7 @@ const contentData = [
   {
     id: 11,
     type: "highlight",
+    style: "innovation",
     Icon: "./src/assets/icons/innovation.svg?react",
     title: "Best Innovation Award",
     description: "Recognition for our IoT-enabled agricultural monitoring robot",

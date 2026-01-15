@@ -77,6 +77,32 @@ body {
     color: blue;
 }
 
+button {
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(30, 60, 211, 0.5);
+    border: rgb(133, 81, 247);
+}
+
 .footer--container {
     background-color: black;
     color: white;
@@ -320,6 +346,11 @@ body {
     border-radius: 10px;
     margin: 40px 10px;
     font-size: 1rem;
+    border: none;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 5px 10px #124aff;
+    background: linear-gradient(135deg, rgb(92, 242, 242), rgb(61, 61, 235));
 }
 
 .main--container--mn .hero--section .btns--exploring .project--exploring {
@@ -327,7 +358,7 @@ body {
 }
 
 .main--container--mn .hero--section .btns--exploring .upcoming--events {
-    padding: 13px 18px;
+    padding: 12px 18px;
 }
 
 .main--container--mn .hero--section .btns--exploring button span {
@@ -368,6 +399,13 @@ body {
     background-color: #132F4C;
     text-align: left;
     padding-left: 10px;
+    transition:
+        transform 0.3s ease;
+}
+
+.main--container--mn .hero--section .club--ideas .club--highlights .highlights:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 255, 0.3);
 }
 
 .main--container--mn .hero--section .club--ideas .club--highlights .highlights h1 {
@@ -418,6 +456,22 @@ body {
     stroke-width: 1.5;
 
     transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.main--container--mn .hero--section .main--event .event--inside .next--event--detail--button {
+    box-shadow:
+        0 6px 15px rgba(30, 202, 211, 0.35),
+        inset 0 0 8px rgba(255, 255, 255, 0.35);
+    
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.main--container--mn .hero--section .main--event .event--inside .next--event--detail--button:hover {
+    box-shadow:
+        0 10px 25px rgba(30, 202, 211, 0.35),
+        inset 0 0 8px rgba(255, 255, 255, 0.35);
 }
 
 .main--container--mn .hero--section .club--ideas .club--highlights .highlights .icon--box:hover {
@@ -540,7 +594,7 @@ body {
 
 .main--container--mn .hero--section .club--highlight .highlight--boxes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     width: 100%;
     justify-content: center;
@@ -614,6 +668,10 @@ body {
     transition: transform 0.3s ease, fill 0.3s ease;
 }
 
+.main--container--mn .hero--section .club--highlight .highlight--boxes .highlights .highlight--icon .achievement {
+    background: linear-gradient(135deg, rgb(0, 0, 0), rgb(255, 255, 255));
+}
+
 .main--container--mn .hero--section .club--highlight .highlight--boxes .highlights .highlight--icon:hover {
     transform: translateY(-4px) scale(1.05);
     box-shadow: 0 12px 25px rgba(30, 202, 211, 0.5);
@@ -680,7 +738,7 @@ body {
     padding: 10px 30px;
 }
 
-.main--container--mn .hero--section .main--event .event--inside .next--event--deatail {
+.main--container--mn .hero--section .main--event .event--inside .next--event--detail {
     display: flex;
 }
 
@@ -690,8 +748,9 @@ body {
     position: absolute;
     margin: 20px;
     font-weight: 600;
-    border-radius: 40px;
-    background: linear-gradient(135deg, rgb(120, 246, 246), rgb(45, 45, 247));
+    border-radius: 8px;
+    /* background: linear-gradient(135deg, rgb(120, 246, 246), rgb(45, 45, 247)); */
+    background: linear-gradient(135deg, rgb(246, 196, 120), rgb(247, 45, 146));
 }
 
 .main--container--mn .hero--section .main--event .event--inside .next--event--info {
@@ -2703,8 +2762,4 @@ li::marker {
     flex-direction: column;
     margin: 26px 0px;
     align-items: center;
-}
-
-.footer--container .contact--info {
-    
 }
