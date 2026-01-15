@@ -1,14 +1,14 @@
 import React from 'react'
 import './appStyle.css'
 
-import Home from './components/Home'
-import About from './components/About'
-import Projects from './components/Projects'
-import Events from './components/Event'
-import Achievements from './components/Achievements'
-import Contact from './components/Contact'
-import News from './components/News'
-import Teams from './components/Teams'
+import Home from './pages/Home'
+import About from './pages/About'
+import Projects from './pages/Projects'
+import Events from './pages/Event'
+import Achievements from './pages/Achievements'
+import Contact from './pages/Contact'
+import News from './pages/News'
+import Teams from './pages/Teams'
 
 const App = () => {
   const [openPage, setOpenPage] = React.useState("home");

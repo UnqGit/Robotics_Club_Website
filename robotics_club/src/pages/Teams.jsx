@@ -10,7 +10,7 @@ const Teams = () => {
         <h2>Professor Incharge</h2>
         <div className="faculty-card">
           <div className="faculty-profile-img">
-            <img src="/assets/PI.jpeg" alt="Professor Incharge" />
+            <img src="./assets/PI.jpeg" alt="Professor Incharge" />
           </div>
           <div className="faculty-content">
             <h2 className="faculty-name">Dr. Gagandeep Meena</h2>
@@ -35,7 +35,7 @@ const Teams = () => {
         <h2>Faculty Advisor</h2>
         <div className="faculty-card">
           <div className="faculty-profile-img">
-            <img src="/assets/faculty_advisor.png" alt="Faculty Advisor" />
+            <img src="./assets/faculty_advisor.png" alt="Faculty Advisor" />
           </div>
           <div className="faculty-content">
             <h2 className="faculty-name">Dr. Bharat Gupta</h2>
@@ -66,7 +66,7 @@ const Teams = () => {
           {/* Core Team Card 1 */}
           <div className="core-team-card">
             <div className="core-team-image">
-              <img src="/assets/president.jpg" alt="President" />
+              <img src="./assets/president.jpg" alt="President" />
             </div>
             <div className="core-team-content">
               <h3>Darshan Jain</h3>
@@ -89,7 +89,7 @@ const Teams = () => {
           {/* Core Team Card 2 */}
           <div className="core-team-card">
             <div className="core-team-image">
-              <img src="/assets/president.jpg" alt="President" />
+              <img src="./assets/president.jpg" alt="President" />
             </div>
             <div className="core-team-content">
               <h3>Darshan Jain</h3>
@@ -112,7 +112,7 @@ const Teams = () => {
           {/* Core Team Card 3 */}
           <div className="core-team-card">
             <div className="core-team-image">
-              <img src="/assets/president.jpg" alt="President" />
+              <img src="./assets/president.jpg" alt="President" />
             </div>
             <div className="core-team-content">
               <h3>Darshan Jain</h3>
@@ -135,7 +135,7 @@ const Teams = () => {
           {/* Core Team Card 4 */}
           <div className="core-team-card">
             <div className="core-team-image">
-              <img src="/assets/president.jpg" alt="President" />
+              <img src="./assets/president.jpg" alt="President" />
             </div>
             <div className="core-team-content">
               <h3>Darshan Jain</h3>
@@ -158,7 +158,7 @@ const Teams = () => {
           {/* Core Team Card 5 */}
           <div className="core-team-card">
             <div className="core-team-image">
-              <img src="/assets/president.jpg" alt="President" />
+              <img src="./assets/president.jpg" alt="President" />
             </div>
             <div className="core-team-content">
               <h3>Darshan Jain</h3>
@@ -181,7 +181,7 @@ const Teams = () => {
           {/* Core Team Card 6 */}
           <div className="core-team-card">
             <div className="core-team-image">
-              <img src="/assets/president.jpg" alt="President" />
+              <img src="./assets/president.jpg" alt="President" />
             </div>
             <div className="core-team-content">
               <h3>Darshan Jain</h3>
