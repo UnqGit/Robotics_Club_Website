@@ -7,6 +7,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Projects = () => {
   const [activeProject, setActiveProject] = React.useState(null);
+  const [year, setYear] = React.useState("all");
+  const [projectType, setProjectType] = React.useState("all");
+
+  const filteredProject = contentData
+  .filter(item => item.type === "projects" && 
+  (year === "all" || String(item.year) === year) && 
+  (projectType === "all" || item.projectType === projectType));
+
   {/* Projects Section of the website */}
   return (
     <div className='projects--pro'>
@@ -14,47 +22,106 @@ const Projects = () => {
         <h1>Our Projects</h1>
         <p>Innovative Robotics and AI solutions developed by our talented team members</p>
         <div className="filter--pro">
-          <select className='type'>
-            <option>Type : All</option>
-            <option>Drone</option>
-            <option>Robotic Arm</option>
-          </select>
-          <select className='year'>
-            <option>Year : All</option>
-            <option>2024</option>
-            <option>2025</option>
-          </select>
-          <button>Clear Filter</button>
-        </div>
-
-        <div className="projects--filling">
-          {
-            contentData
-            .filter(item => item.type === "projects")
-            .map(item => (
-              <motion.div
-                layoutId = {`project-${item.id}`}
-                className='pro--box'
-                onClick={() => setActiveProject(item)}
-                whileHover={ { scale: 1.03 } }
+          <select 
+          className='type'
+          value={projectType}
+          onChange={(e) => setProjectType(e.target.value)}
+          >
+            <option
+            value="all"
+            >
+              Type : All</option>
+            <option 
+            value="drone"
               >
-                <div className="pro--imgWrap">
-                  <img src={item.Icon} alt="logo" className='pro---img'/>
-                  <span className='pro--about'>{item.about}</span>
-                </div>
-                <h2>{item.title}</h2>
-
-                <div className="tech">
-                  {
-                    item.technology.map((tech , index) => (
-                      <span key={index}>{tech}</span>
-                    ))
-                  }
-                </div>
-              </motion.div>
-            ))
-          }
+                Drone</option>
+            <option
+            value="roboticArm"
+            >
+              Robotic Arm</option>
+          </select>
+          <select
+           className='year'
+           value={year}
+           onChange={(e) => setYear(e.target.value)}
+           >
+            <option 
+            value="all"
+            >
+              Year : All
+              </option>
+            <option
+            value="2025"
+            >
+              2025</option>
+            <option
+            value="2024"
+            >
+              2024</option>
+            <option
+            value="2023"
+            >
+              2023</option>
+            <option
+            value="2022"
+            >
+              2022</option>
+            <option
+            value="2021"
+            >
+              2021</option>
+            <option
+            value="2020"
+            >
+              2020</option>
+            <option
+            value="2019"
+            >
+              2019</option>
+          </select>
+          <button 
+          onClick={() => {
+            setYear("all");
+            setProjectType("all");
+          }} 
+            >
+            Clear Filter</button>
         </div>
+        {filteredProject.length === 0 ? (
+            <div className="no--project">
+              <h3>NO Project has been uploaded this year</h3>
+              <p>Choose Another Year or Type</p>
+            </div>
+        ) : (
+            <div className="projects--filling">
+              {filteredProject
+                .map(item => (
+                  <motion.div
+                    layoutId = {`project-${item.id}`}
+                    className='pro--box'
+                    onClick={() => setActiveProject(item)}
+                    whileHover={ { scale: 1.03 } }
+                  >
+                    <div className="pro--imgWrap">
+                      <img src={item.Icon} alt="logo" />
+                      <span className='pro--about'>{item.about}</span>
+                    </div>
+                    <h2>{item.title}</h2>
+
+                    <div className="tech">
+                      {
+                        item.technology.map((tech , index) => (
+                          <span key={index}>{tech}</span>
+                        ))
+                      }
+                    </div>
+                  </motion.div>
+                ))
+              }
+            </div>
+
+        )
+        }
 
         <AnimatePresence>
           {
