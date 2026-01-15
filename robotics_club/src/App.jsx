@@ -203,7 +203,7 @@ const App = () => {
 
       {/* 7th page Achievements section of the website */}
       {
-        openPage === "achievements" &&
+        openPage === "achievement" &&
         <Achievements />
       }
 

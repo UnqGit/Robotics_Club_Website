@@ -2396,6 +2396,8 @@ imgWrap--mono {
     }
 }
 
+/* --------- News page Styling ---------*/
+
 
 .news {
     width: 100%;
@@ -2550,3 +2552,33 @@ imgWrap--mono {
     font-family: 'Inter', sans-serif;
 }
 
+/*  ---------------- Achievement Page styling ----------------  */
+
+.achievement--section {
+    width: 100%;
+    text-align: center;
+}
+
+.achievement--section .achieve--am {
+    width: 100%;
+}
+
+.achievement--section .achieve--am h1 {
+    font-size: 3rem;
+    margin: 25px;
+    margin-top: 80px;
+    color: #00aeff;
+    text-shadow:
+        0 0 1px #00ffff,
+        0 0 1px #00ffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.achievement--section .achieve--am p {
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
+    margin: 15px 10px;
+    color: #E0E0E0;
+    justify-content: center;
+    justify-items: center;
+}
