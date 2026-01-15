@@ -2,7 +2,7 @@ import '../appStyle.css'
 import contentData from '../data/contentData'
 
 const About = () => {
-  {/* About section of the website */}
+  {/* About section of the website */ }
   return (
     <div className="about--ab">
       <div className="all--about">
@@ -12,41 +12,46 @@ const About = () => {
         <div className="about---container">
           {
             contentData
-            .filter(item => item.type === "info")
-            .map(item => (
-              <div className="about--box" key={item.id}>
-                <div className="about--icons">
-                  <img src={item.Icon} alt="icon" />
+              .filter(item => item.type === "info")
+              .map(item => (
+                <div className="about--box" key={item.id}>
+                  <div className="about--icons">
+                    <img src={item.Icon} alt="icon" />
+                  </div>
+                  <h3>{item.members}</h3>
+                  <p>{item.description}</p>
                 </div>
-                <h3>{item.members}</h3>
-                <p>{item.description}</p>
-              </div>
-            ))
+              ))
           }
         </div>
 
         <div className="longtime--info">
           {
             contentData
-            .filter(item => item.type === "longtimeInfo")
-            .map(item => (
-              <div className="longInfo" key={item.id}>
-                <div className="longInfo__icon">
-                  <img src={item.Icon} alt="logo" />
+              .filter(item => item.type === "longtimeInfo")
+              .map(item => (
+                <div className={`longInfo longInfo--${item.gradient}`} key={item.id}>
+                  <div className="longInfo__image">
+                    <img src={item.Image} alt={item.title} />
+                  </div>
+                  <div className="longInfo__content">
+                    <div className={`longInfo__icon longInfo__icon--${item.gradient}`}>
+                      <img src={item.Icon} alt="logo" />
+                    </div>
+                    <h2>{item.title}</h2>
+                    <ul className='points--list'>
+                      {
+                        item.description.map((point, index) => (
+                          <li key={index} className='longTime--desc'>
+                            <span className='point'>●</span>
+                            {point}
+                          </li>
+                        ))
+                      }
+                    </ul>
+                  </div>
                 </div>
-                <h2>{item.title}</h2>
-                  <ul className='points--list'>
-                    {
-                      item.description.map((point, index) => (
-                        <li key={index} className='longTime--desc'>
-                          <span className='point'>●</span>
-                          {point}
-                        </li>
-                      ))
-                    }
-                  </ul>
-              </div>
-            ))
+              ))
           }
         </div>
 
@@ -57,18 +62,18 @@ const About = () => {
             <div className="focus--container">
               {
                 contentData
-                .filter(item => item.type === "focus")
-                .map(item => (
-                  <div className="focus--box" key={item.id}>
-                    <div className="focus--icon">
-                      <img src={item.Icon} alt="logo" />
+                  .filter(item => item.type === "focus")
+                  .map(item => (
+                    <div className="focus--box" key={item.id}>
+                      <div className="focus--icon">
+                        <img src={item.Icon} alt="logo" />
+                      </div>
+                      <div className="focus--content">
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                      </div>
                     </div>
-                    <div className="focus--content">
-                      <h3>{item.title}</h3>
-                      <p>{item.description}</p>
-                    </div>
-                  </div>
-                ))
+                  ))
               }
             </div>
           </div>
@@ -94,21 +99,21 @@ const About = () => {
               </div>
               {
                 contentData.filter(item => item.type === "facility")
-                .map(item => (
-                  <div className="resource--img" key={item.id}>
-                    <img src={item.Icon} alt="logo" />
-                    <div className="img--desc">
-                      <h2>{item.title}</h2>
-                      <p>{item.description}</p>
+                  .map(item => (
+                    <div className="resource--img" key={item.id}>
+                      <img src={item.Icon} alt="logo" />
+                      <div className="img--desc">
+                        <h2>{item.title}</h2>
+                        <p>{item.description}</p>
+                      </div>
                     </div>
-                  </div>
-                ))
+                  ))
               }
             </div>
           </div>
         </div>
 
-        
+
 
 
       </div>

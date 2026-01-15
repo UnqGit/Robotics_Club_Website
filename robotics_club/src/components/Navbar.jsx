@@ -21,7 +21,7 @@ const Navbar = ({openPage, setOpenPage, hamburger, setHamburger}) => {
                 <button onClick={() => setOpenPage("events")}>Events</button>
                 <button onClick={() => setOpenPage("teams")}>Teams</button>
                 <button onClick={() => setOpenPage("news")}>News</button>
-                <button onClick={() => setOpenPage("achievement")}>Achievements</button>
+                <button onClick={() => setOpenPage("achievements")}>Achievements</button>
                 <button onClick={() => setOpenPage("contact")}>Contact</button>
             </div>
 
@@ -43,7 +43,7 @@ const Navbar = ({openPage, setOpenPage, hamburger, setHamburger}) => {
                 <button onClick={() => handleMobileNav(("events"))}>Events</button>
                 <button onClick={() => handleMobileNav(("teams"))}>Teams</button>
                 <button onClick={() => handleMobileNav(("news"))}>News</button>
-                <button onClick={() => handleMobileNav(("achievement"))}>Achievements</button>
+                <button onClick={() => handleMobileNav(("achievements"))}>Achievements</button>
                 <button onClick={() => handleMobileNav(("contact"))}>Contact</button>
             </div>
 

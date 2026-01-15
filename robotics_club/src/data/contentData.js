@@ -142,26 +142,32 @@ const contentData = [
     id: 18,
     type: "longtimeInfo",
     Icon: "./src/assets/icons/industryCircle.svg?react",
+    Image: "./src/assets/img/mission.png",
     title: "Our Mission",
-    description: ["To enhance students technical skills by fostering hands-on learning in robotics, automation, electronics, and emerging technologies while promoting innovation and teamwork.",]
+    description: ["To enhance students' technical skills by fostering hands-on learning in robotics, automation, electronics, and emerging technologies while promoting innovation and teamwork."],
+    gradient: "mission"
   },
   {
     id: 19,
     type: "longtimeInfo",
     Icon: "./src/assets/icons/events.svg?react",
+    Image: "./src/assets/img/vision.png",
     title: "Our Vision",
     description: ["To build a strong robotics culture at NIT Patna and beyond, empowering students across disciplines to innovate, collaborate, and create impactful technological solutions."],
+    gradient: "vision"
   },
   {
     id: 20,
     type: "longtimeInfo",
     Icon: "./src/assets/icons/project.svg?react",
+    Image: "./src/assets/img/objective.png",
     title: "Our Objective",
     description: [
-      " To stimulate interest in robotics among students",
-      " To provide practical exposure through projects, workshops, and competitions",
-      " To encourage interdisciplinary collaboration and innovation",
-    ]
+      "To stimulate interest in robotics among students",
+      "To provide practical exposure through projects, workshops, and competitions",
+      "To encourage interdisciplinary collaboration and innovation",
+    ],
+    gradient: "objective"
   },
   {
     id: 21,
@@ -194,14 +200,14 @@ const contentData = [
   {
     id: 25,
     type: "facility",
-    Icon: "./src/assets/img/img1.jpeg",
+    Icon: "./src/assets/img/codeBase1.jpg",
     title: "Main Laboratory",
     description: "2000 sq feet dedicated workspace with modern equipment"
   },
   {
     id: 26,
     type: "facility",
-    Icon: "./src/assets/img/img1.jpeg",
+    Icon: "./src/assets/img/codeBase2.jpg",
     title: "Workshop Area",
     description: "Fully Equipped for hands-on project development"
   },
