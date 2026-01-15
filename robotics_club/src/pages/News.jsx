@@ -16,7 +16,7 @@ const News = () => {
         <div className="news--content">
           {
             contentData
-            .filter(item => item.type === "news")
+            .filter(item => item.type === "latestnews")
             .map(item => (
               <div className="news--card" key={item.id}>
                 <div className="img--news">
@@ -38,35 +38,11 @@ const News = () => {
             ))
           }
         </div>
+        <h2>PAST NEWS</h2>
+        <p>Stay updated with the past acheivement.events.ande innovations from our robotics club</p>
 
-        <h2>Past News</h2>
-        <p>Get Information with the past achievements, events, and innovations from our robotics club</p>
         
-          <div className="news--content">
-          {
-            contentData
-            .filter(item => item.type === "news")
-            .map(item => (
-              <div className="news--card" key={item.id}>
-                <div className="img--news">
-                  <img src={item.Image} alt="img" />
-                  <p>{item.about}</p>
-                </div>
-                <div className="data--time">
-                  <div className="news--icon">
-                    <img src={calender} alt="icon" />
-                  </div>
-                  <span>{item.date}</span>
-                </div>
-                <div className="news--desc">
-                  <h4>{item.title}</h4>
-                  <p>{item.description}</p>
-                </div>
 
-              </div>
-            ))
-          }
-        </div>
 
       </div>
     </div>
