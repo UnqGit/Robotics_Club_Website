@@ -1,6 +1,5 @@
-import React from 'react'
-
 const Teams = () => {
+  {/* Teams section of the website */}
   return (
     <main className="teams-page">
       <h1 className="main-heading">Meet Our Team</h1>

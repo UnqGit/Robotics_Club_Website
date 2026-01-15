@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Projects = () => {
   const [activeProject, setActiveProject] = React.useState(null);
-
+  {/* Projects Section of the website */}
   return (
     <div className='projects--pro'>
       <div className="content--pro">

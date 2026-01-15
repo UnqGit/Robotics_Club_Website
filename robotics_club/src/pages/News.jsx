@@ -4,6 +4,7 @@ import contentData from '../data/contentData'
 import calender from '../assets/icons/events.svg?react'
 
 const News = () => {
+  {/* News section of the website */}
   return (
     <div className='news'>
       <div className="news--section">

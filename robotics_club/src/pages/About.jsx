@@ -2,6 +2,7 @@ import '../appStyle.css'
 import contentData from '../data/contentData'
 
 const About = () => {
+  {/* About section of the website */}
   return (
     <div className="about--ab">
       <div className="all--about">
