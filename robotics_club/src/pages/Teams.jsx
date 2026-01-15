@@ -1,3 +1,6 @@
+import React from 'react'
+import contentData from '../data/contentData'
+
 const Teams = () => {
   {/* Teams section of the website */}
   return (
@@ -62,144 +65,34 @@ const Teams = () => {
 
       <section className="core-team-section">
         <div className="core-team-grid">
-          {/* Core Team Card 1 */}
-          <div className="core-team-card">
-            <div className="core-team-image">
-              <img src="./assets/president.jpg" alt="President" />
-            </div>
-            <div className="core-team-content">
-              <h3>Darshan Jain</h3>
-              <span className="core-team-role">President</span>
-              <div className="core-team-info">
-                <span className="label">Specialization</span>
-                <p>Autonomous Systems</p>
+          {
+              contentData
+              .filter(item => item.type === "teams")
+              .map(item => (
+            <div className="core-team-card">
+              <div className="core-team-image">
+                <img src={item.Image} alt="President" />
               </div>
-              <div className="core-team-achievement">
-                🏆 IEEE Best Paper Award 2025
-              </div>
-              <div className="core-team-contact">
-                <i className="fa-regular fa-envelope core-icon core-email"></i>
-                <i className="fa-brands fa-linkedin-in core-icon core-linkedin"></i>
-                <i className="fa-brands fa-github core-icon core-github"></i>
-              </div>
-            </div>
-          </div>
-
-          {/* Core Team Card 2 */}
-          <div className="core-team-card">
-            <div className="core-team-image">
-              <img src="./assets/president.jpg" alt="President" />
-            </div>
-            <div className="core-team-content">
-              <h3>Darshan Jain</h3>
-              <span className="core-team-role">President</span>
-              <div className="core-team-info">
-                <span className="label">Specialization</span>
-                <p>Autonomous Systems</p>
-              </div>
-              <div className="core-team-achievement">
-                🏆 IEEE Best Paper Award 2025
-              </div>
-              <div className="core-team-contact">
-                <i className="fa-regular fa-envelope core-icon core-email"></i>
-                <i className="fa-brands fa-linkedin-in core-icon core-linkedin"></i>
-                <i className="fa-brands fa-github core-icon core-github"></i>
+              <div className="core-team-content">
+                <h3>{item.name}</h3>
+                <span className="core-team-role">{item.position}</span>
+                <div className="core-team-info">
+                  <span className="label">Specialization</span>
+                  <p>Autonomous Systems</p>
+                </div>
+                <div className="core-team-achievement">
+                  🏆 IEEE Best Paper Award 2025
+                </div>
+                <div className="core-team-contact">
+                  <i className="fa-regular fa-envelope core-icon core-email"></i>
+                  <i className="fa-brands fa-linkedin-in core-icon core-linkedin"></i>
+                  <i className="fa-brands fa-github core-icon core-github"></i>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* Core Team Card 3 */}
-          <div className="core-team-card">
-            <div className="core-team-image">
-              <img src="./assets/president.jpg" alt="President" />
-            </div>
-            <div className="core-team-content">
-              <h3>Darshan Jain</h3>
-              <span className="core-team-role">President</span>
-              <div className="core-team-info">
-                <span className="label">Specialization</span>
-                <p>Autonomous Systems</p>
-              </div>
-              <div className="core-team-achievement">
-                🏆 IEEE Best Paper Award 2025
-              </div>
-              <div className="core-team-contact">
-                <i className="fa-regular fa-envelope core-icon core-email"></i>
-                <i className="fa-brands fa-linkedin-in core-icon core-linkedin"></i>
-                <i className="fa-brands fa-github core-icon core-github"></i>
-              </div>
-            </div>
-          </div>
-
-          {/* Core Team Card 4 */}
-          <div className="core-team-card">
-            <div className="core-team-image">
-              <img src="./assets/president.jpg" alt="President" />
-            </div>
-            <div className="core-team-content">
-              <h3>Darshan Jain</h3>
-              <span className="core-team-role">President</span>
-              <div className="core-team-info">
-                <span className="label">Specialization</span>
-                <p>Autonomous Systems</p>
-              </div>
-              <div className="core-team-achievement">
-                🏆 IEEE Best Paper Award 2025
-              </div>
-              <div className="core-team-contact">
-                <i className="fa-regular fa-envelope core-icon core-email"></i>
-                <i className="fa-brands fa-linkedin-in core-icon core-linkedin"></i>
-                <i className="fa-brands fa-github core-icon core-github"></i>
-              </div>
-            </div>
-          </div>
-
-          {/* Core Team Card 5 */}
-          <div className="core-team-card">
-            <div className="core-team-image">
-              <img src="./assets/president.jpg" alt="President" />
-            </div>
-            <div className="core-team-content">
-              <h3>Darshan Jain</h3>
-              <span className="core-team-role">President</span>
-              <div className="core-team-info">
-                <span className="label">Specialization</span>
-                <p>Autonomous Systems</p>
-              </div>
-              <div className="core-team-achievement">
-                🏆 IEEE Best Paper Award 2025
-              </div>
-              <div className="core-team-contact">
-                <i className="fa-regular fa-envelope core-icon core-email"></i>
-                <i className="fa-brands fa-linkedin-in core-icon core-linkedin"></i>
-                <i className="fa-brands fa-github core-icon core-github"></i>
-              </div>
-            </div>
-          </div>
-
-          {/* Core Team Card 6 */}
-          <div className="core-team-card">
-            <div className="core-team-image">
-              <img src="./assets/president.jpg" alt="President" />
-            </div>
-            <div className="core-team-content">
-              <h3>Darshan Jain</h3>
-              <span className="core-team-role">President</span>
-              <div className="core-team-info">
-                <span className="label">Specialization</span>
-                <p>Autonomous Systems</p>
-              </div>
-              <div className="core-team-achievement">
-                🏆 IEEE Best Paper Award 2025
-              </div>
-              <div className="core-team-contact">
-                <i className="fa-regular fa-envelope core-icon core-email"></i>
-                <i className="fa-brands fa-linkedin-in core-icon core-linkedin"></i>
-                <i className="fa-brands fa-github core-icon core-github"></i>
-              </div>
-            </div>
-          </div>
-        </div>
+              ))
+          }
+      </div>
       </section>
     </main>
   )
