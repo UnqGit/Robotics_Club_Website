@@ -39,7 +39,7 @@ const Projects = () => {
                 whileHover={ { scale: 1.03 } }
               >
                 <div className="pro--imgWrap">
-                  <img src={item.Icon} alt="logo" />
+                  <img src={item.Icon} alt="logo" className='pro---img'/>
                   <span className='pro--about'>{item.about}</span>
                 </div>
                 <h2>{item.title}</h2>
