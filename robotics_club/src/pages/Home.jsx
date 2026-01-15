@@ -1,7 +1,7 @@
 import contentData from "../data/contentData";
 import logo  from "../assets/Robotics_logo.png"
 
-const Home = () => {
+const Home = ({setOpenPage}) => {
     {/* hero or the main page */}
     return (
         <div className="hero--section">
@@ -12,8 +12,12 @@ const Home = () => {
             <p>Innovating Tomorrow Through Robotics, AI & Automation</p>
             <p>Where creativity meets technology. Join us in building intelligent systems that shape the future.</p>
             <div className="btns--exploring">
-                <button className='project--exploring'>Exploring Projects<span>➜</span></button>
-                <button className='upcoming--events'>Upcoming Events</button>
+                <button className='project--exploring'
+                onClick={() => setOpenPage("projects")}
+                >Exploring Projects<span>➜</span></button>
+                <button className='upcoming--events'
+                onClick={() => setOpenPage("events")}
+                >Upcoming Events</button>
             </div>
 
             <div className="club--ideas">

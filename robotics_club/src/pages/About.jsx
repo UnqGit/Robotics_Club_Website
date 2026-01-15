@@ -3,6 +3,8 @@ import contentData from '../data/contentData'
 
 const About = () => {
   {/* About section of the website */ }
+const facility = ["3D Printers & CNC Machines for rapid prototyping", "Arduino, Raspberry Pi & ESP32 development boards", "Advanced sensor kits (LIDAR, IMU, ultrasonic)", "Soldering stations & electronic measurement tools", "High-performance computers with simulation software", "VR/AR headsets for immersive development", "Robotic arms & autonomous vehicle platforms", "Dedicated workspace with 20+ workbenches"];
+
   return (
     <div className="about--ab">
       <div className="all--about">
@@ -87,14 +89,11 @@ const About = () => {
               <div className="resources">
                 <h2>Lab Equipments & Resources</h2>
                 <ul className='facility--ul'>
-                  <li> 3D Printers & CNC Machines for rapid prototyping</li>
-                  <li> Arduino, Raspberry Pi & ESP32 development boards</li>
-                  <li> Advanced sensor kits (LIDAR, IMU, ultrasonic)</li>
-                  <li> Soldering stations & electronic measurement tools</li>
-                  <li> High-performance computers with simulation software</li>
-                  <li> VR/AR headsets for immersive development</li>
-                  <li> Robotic arms & autonomous vehicle platforms</li>
-                  <li> Dedicated workspace with 20+ workbenches</li>
+                 {
+                  facility.map(item => (
+                    <li>{item}</li>
+                  ))
+                 }
                 </ul>
               </div>
               {
