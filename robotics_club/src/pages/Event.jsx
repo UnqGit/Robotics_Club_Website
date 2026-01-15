@@ -7,6 +7,7 @@ const Event = () => {
   const filteredEves = contentData
     .filter(item => item.type === "events" && (filter === "All" || item.filter === filter))
 
+  {/* Events section of the website */}
   return (
     <div className='eve'>
       <div className="eve--block">

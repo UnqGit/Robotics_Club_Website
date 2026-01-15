@@ -2,6 +2,7 @@ import React from 'react'
 import contentData from '../data/contentData'
 
 const Teams = () => {
+  {/* Teams section of the website */}
   return (
     <main className="teams-page">
       <h1 className="main-heading">Meet Our Team</h1>

@@ -1,6 +1,5 @@
-import React from 'react'
-
 const Contact = () => {
+  {/* Contact section of the website */}
   return (
     <main className="contact-page">
       <h1 className="main-heading">Get In Touch</h1>

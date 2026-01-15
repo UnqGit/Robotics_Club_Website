@@ -1,7 +1,7 @@
-import React from "react";
 import contentData from "../data/contentData";
 
 const Home = () => {
+    {/* hero or the main page */}
     return (
         <div className="hero--section">
             <div className="img--hero">

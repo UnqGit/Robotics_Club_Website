@@ -2,6 +2,7 @@ import React from 'react'
 import contentData from '../data/contentData'
 
 const Achievements = () => {
+  {/* Achievements section of the website */}
   return (
     <div className='achievement--section'>
         <div className="achieve--am">
