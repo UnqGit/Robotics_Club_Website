@@ -18,10 +18,10 @@ const News = () => {
               <div className="news--card" key={item.id}>
                 <div className="img--news">
                   <img src={item.Image} alt="img" />
-                  <p>{item.about}</p>
+                  <p className='card'>{item.about}</p>
                 </div>
                 <div className="data--time">
-                  <div className="news--icon">
+                  <div className="news--icon invert">
                     <img src={calendar} alt="icon" />
                   </div>
                   <span>{item.date}</span>
