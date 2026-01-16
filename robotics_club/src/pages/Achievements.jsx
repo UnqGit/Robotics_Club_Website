@@ -1,5 +1,7 @@
 import React from 'react'
 import contentData from '../data/contentData'
+import date from "../assets/icons/events.svg?react"
+
 
 const Achievements = () => {
   {/* Achievements section of the website */}
@@ -30,11 +32,20 @@ const Achievements = () => {
                 contentData
                 .filter(item => item.type === "achievement")
                 .map(item => (
-                  <div className="content--div">
+                  <div className="content--div card">
                     <div className="imgturn">
-                      <img src={item.Image} alt="logo" />
+                      <img src={item.Image}  alt="logo" />
                       <span className='got--achieve'>{item.got}</span>
                       <span className='about--achieve'>{item.about}</span>
+                    </div>
+                    <div className="content--data">
+                      <div className="achieve--date">
+                        <img src={date} alt="logo" />
+                        <p>{item.date}</p>
+                      </div>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                      <p className='team--name'>{item.teamName}</p>
                     </div>
                   </div>
                 ))
