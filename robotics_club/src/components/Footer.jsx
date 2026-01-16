@@ -43,7 +43,9 @@ const Footer = ({ setOpenPage }) => {
                     <p>Contact</p>
                     <div className="location--link">
                         <i className="fa-solid fa-location-arrow"></i>
-                        <span>Main Building, First floor</span>
+                        <span>Incubation Center, 3rd Floor <br />
+                            National Institute of Technology, Patna <br />
+                            Ashok Rajpath, 800005</span>
                     </div>
                     <div className="email--link">
                         <i className="fa-regular fa-envelope"></i>
