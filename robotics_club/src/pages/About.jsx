@@ -16,7 +16,7 @@ const facility = ["3D Printers & CNC Machines for rapid prototyping", "Arduino, 
             contentData
               .filter(item => item.type === "info")
               .map(item => (
-                <div className="about--box" key={item.id}>
+                <div className="about--box card" key={item.id}>
                   <div className="about--icons">
                     <img src={item.Icon} alt="icon" />
                   </div>
@@ -66,7 +66,7 @@ const facility = ["3D Printers & CNC Machines for rapid prototyping", "Arduino, 
                 contentData
                   .filter(item => item.type === "focus")
                   .map(item => (
-                    <div className="focus--box" key={item.id}>
+                    <div className="focus--box card" key={item.id}>
                       <div className="focus--icon">
                         <img src={item.Icon} alt="logo" />
                       </div>
