@@ -35,7 +35,7 @@ const Navbar = ({ openPage, setOpenPage, hamburger, setHamburger }) => {
         <div className="navbar--nb">
             <div className="logo--point">
                 <img src="/assets/Robotics_logo.png" alt="logo" />
-                <h1>Robotics club</h1>
+                <h1>Robotics Club</h1>
             </div>
 
             <div className="navigating--navbar">
