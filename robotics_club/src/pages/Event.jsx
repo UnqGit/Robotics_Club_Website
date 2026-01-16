@@ -1,6 +1,11 @@
 import React from 'react'
 import contentData from '../data/contentData';
 
+import calendar from "../assets/icons/events.svg?react"
+import time from "../assets/icons/industryCircle.svg?react";
+import members from "../assets/icons/about.svg?react";
+import venue from "../assets/icons/building.svg?react";
+
 const Event = () => {
 
   const [filter, setFilter] = React.useState("All");
@@ -47,8 +52,8 @@ const Event = () => {
                     </div>
                     <div className="bottom--eve">
                       <div className="option">
-                        <div className="option--icon">
-                          <img src={item.Icon} alt="icon" />
+                        <div className="option--icon invert calendar">
+                          <img src={calendar} alt="icon" />
                         </div>
                         <div className="option--desc">
                           <span>Date </span>
@@ -56,8 +61,8 @@ const Event = () => {
                         </div>
                       </div>
                       <div className="option">
-                        <div className="option--icon">
-                          <img src={item.Icon} alt="icon" />
+                        <div className="option--icon invert time">
+                          <img src={time} alt="icon" />
                         </div>
                         <div className="option--desc">
                           <span>Time </span>
@@ -65,8 +70,8 @@ const Event = () => {
                         </div>
                       </div>
                       <div className="option">
-                        <div className="option--icon">
-                          <img src={item.Icon} alt="icon" />
+                        <div className="option--icon invert venue">
+                          <img src={venue} alt="icon" />
                         </div>
                         <div className="option--desc">
                           <span>Venue </span>
@@ -74,8 +79,8 @@ const Event = () => {
                         </div>
                       </div>
                       <div className="option">
-                        <div className="option--icon">
-                          <img src={item.Icon} alt="icon" />
+                        <div className="option--icon invert expected">
+                          <img src={members} alt="icon" />
                         </div>
                         <div className="option--desc">
                           <span>Expected </span>

@@ -29,7 +29,7 @@ const Home = ({setOpenPage}) => {
                     .filter(item => item.type === "explore")
                     .map(item => (
                         <div className="highlights card" key={item.id}>
-                            <div className={`icon--box ${item.style}`}>
+                            <div className={`icon--box invert ${item.style}`}>
                                 <img src={item.Icon} alt={`${item.title} icon`} />
                             </div>
                             <h1>{item.title}</h1>
@@ -50,7 +50,7 @@ const Home = ({setOpenPage}) => {
                     .filter(item => item.type === "highlight")
                     .map(item => (
                         <div className="highlights card" key={item.id}>
-                            <div className={`highlight--icon ${item.style}`}>
+                            <div className={`highlight--icon invert ${item.style}`}>
                                 <img src={item.Icon} alt='highlight Icon' />
                             </div>
                             <h1>{item.title}</h1>

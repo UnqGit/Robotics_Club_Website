@@ -93,6 +93,10 @@ button:active {
     transform: scale(0.95);
 }
 
+.invert img {
+    filter: brightness(0) invert(1);
+}
+
 .card {
     box-shadow: 0 0 10px black;
     transition:
@@ -1504,6 +1508,7 @@ button:active {
     width: 100%;
     margin: 0;
     margin-bottom: 60px;
+    height: max(80vh, fit-content);
     padding: 0;
 }
 
@@ -2158,6 +2163,19 @@ h2 {
         box-shadow 0.3s ease;
     margin-top: 10px;
     margin-left: 10px;
+}
+
+.events--eve--section .filteringEvents .bottom--eve .option .option--icon.invert.calendar {
+    background: linear-gradient(to right, rgb(78, 247, 157), rgb(82, 140, 195));
+}
+.events--eve--section .filteringEvents .bottom--eve .option .option--icon.invert.time {
+    background: linear-gradient(to right, rgb(179, 78, 247), rgb(7, 230, 219));
+}
+.events--eve--section .filteringEvents .bottom--eve .option .option--icon.invert.venue {
+    background: linear-gradient(to right, rgb(184, 184, 98), rgb(183, 76, 199));
+}
+.events--eve--section .filteringEvents .bottom--eve .option .option--icon.invert.expected {
+    background: linear-gradient(to right, rgb(100, 100, 204), rgb(233, 39, 126));
 }
 
 .events--eve--section .filteringEvents .bottom--eve .option .option--icon img {
@@ -2922,6 +2940,7 @@ h2 {
     border-radius: 10px;
     box-sizing: border-box;
     transition: all 0.3s ease;
+    background-color: rgba(41, 41, 41, 0.606);
 }
 
 .news .news--section .news--content .news--card:hover {
@@ -2969,12 +2988,13 @@ h2 {
 }
 
 .news--icon {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #516e6f;
+    /* background-color: #516e6f; */
+    background: linear-gradient(50deg, rgb(216, 124, 221), rgb(113, 194, 224));
     border-radius: 12px;
     box-shadow:
         0 6px 15px rgba(30, 202, 211, 0.35),
