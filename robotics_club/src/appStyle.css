@@ -2902,7 +2902,6 @@ h2 {
 }
 
 .news .news--section .news--input {
-    border: 3px solid blue;
     height: 50px;
     width: 60%;
     border-radius: 10px;
@@ -3035,10 +3034,13 @@ h2 {
 .achievement--section {
     width: 100%;
     text-align: center;
+    margin-top: 50px;
 }
 
 .achievement--section .achieve--am {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .achievement--section .achieve--am h1 {
@@ -3060,6 +3062,144 @@ h2 {
     justify-content: center;
     justify-items: center;
 }
+
+.achieve--data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    width: 80%;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 80px;
+    margin-top: 60px;
+    align-self: center;
+}
+
+.achievement--section .achieve--am .achieve--data .achieve--area {
+    width: 80%;
+    height: 180px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    text-align: left;
+    padding-left: 10px;
+    align-items: stretch;
+    background-color: #581c87;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.achievement--section .achieve--am .achieve--data .achieve--area:hover {
+    transform: translateY(+3px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    border: 1px solid blueviolet;
+}
+
+.achievement--section .achieve--am .achieve--data .achieve--area h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin: 15px 0px 0px 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.achievement--section .achieve--am .achieve--data .achieve--area .achieve--icons {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+.achievement--section .achieve--am .achieve--data .achieve--area:nth-child(1) .achieve--icons  {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+.achievement--section .achieve--am .achieve--data .achieve--area:nth-child(2) .achieve--icons  {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+}
+.achievement--section .achieve--am .achieve--data .achieve--area:nth-child(3) .achieve--icons  {
+    background: linear-gradient(135deg, #eab308, #ca8a04);
+    box-shadow: 0 8px 25px rgba(234, 179, 8, 0.4);
+}
+.achievement--section .achieve--am .achieve--data .achieve--area:nth-child(4) .achieve--icons  {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+}
+
+.achievement--section .achieve--am .achieve--data .achieve--area p {
+    font-size: 1rem;
+    margin: 15px 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+.achievement--section .achieve--am .achieve--data .achieve--area .achieve--icons img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.achievement--section .achieve--am .achieve--data .achieve--area .achieve--icons:hover {
+    transform: translateY(-4px) scale(1.08);
+}
+
+@media (max-width: 1000px) {
+    .achievement--section .achieve--am .achieve--data {
+        width: 85%;
+    }
+    .achievement--section .achieve--am .achieve--data .achieve--area {
+        width: 90%;
+    }
+}
+
+@media (max-width : 768px) {
+    .achievement--section .achieve--am .achieve--data {
+        width: 90%;
+    }
+    .achievement--section .achieve--am .achieve--data .achieve--area {
+        width: 100%;
+    }
+}
+
+.achievement--content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2400px, 1fr));
+    gap: 20px;
+    width: 80%;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 80px;
+    margin-top: 60px;
+    align-self: center;
+}
+
+ .achievement--content .content--div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+    width: fit-content;
+    height: fit-content;
+ }
+
+  .achievement--content .content--div .imgturn {
+    width: 100%;
+    align-items: center;
+    align-content: center;  
+    justify-content: center;
+    position: relative;
+  }
+
+    .achievement--content .content--div .imgturn IMG {
+        height: 200px;
+        position: absolute;
+    }
+
+/* ---------Styling of the Footer Part of the website------- */
 
 .footer--option {
     display: flex;
