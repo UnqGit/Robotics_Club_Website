@@ -29,29 +29,29 @@ const App = () => {
   return (
     <div className='main--container--mn'>
 
-      <Navbar 
+      <Navbar
         openPage={openPage}
         setOpenPage={setOpenPage}
         hamburger={hamburger}
         setHamburger={setHamburger}
       />
-      
+
       {
-        openPage === "home"  && 
+        openPage === "home" &&
         <Home
           setOpenPage={setOpenPage}
-        /> 
+        />
       }
-      { openPage === "about" && <About /> }
-      { openPage === "projects" && <Projects /> }
-      { openPage === "events" && <Events /> }
-      { openPage === "teams" && <Teams /> }
-      { openPage === "contact" && <Contact /> }
-      { openPage === "achievements" && <Achievements /> }
-      { openPage === "news" && <News /> }
+      {openPage === "about" && <About />}
+      {openPage === "projects" && <Projects />}
+      {openPage === "events" && <Events />}
+      {openPage === "teams" && <Teams />}
+      {openPage === "contact" && <Contact />}
+      {openPage === "achievements" && <Achievements />}
+      {openPage === "news" && <News />}
 
-      <Footer />
-      
+      <Footer setOpenPage={setOpenPage} />
+
     </div>
   )
 }

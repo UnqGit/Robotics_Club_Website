@@ -1,6 +1,6 @@
 import React from "react"
 
-const Footer = () => {
+const Footer = ({ setOpenPage }) => {
     return (
         <div className="footer--option">
             <div className="line"></div>
@@ -16,17 +16,17 @@ const Footer = () => {
                 </div>
                 <div className="quick--link">
                     <p>Quick links</p>
-                    <button>Home</button>
-                    <button>About Us</button>
-                    <button>Projects</button>
-                    <button>Events</button>
+                    <button onClick={() => setOpenPage("home")}>Home</button>
+                    <button onClick={() => setOpenPage("about")}>About Us</button>
+                    <button onClick={() => setOpenPage("projects")}>Projects</button>
+                    <button onClick={() => setOpenPage("events")}>Events</button>
                 </div>
                 <div className="resources--link">
                     <p>Resources</p>
-                    <button>Team</button>
-                    <button>News</button>
-                    <button>Achievement</button>
-                    <button>Contact</button>
+                    <button onClick={() => setOpenPage("teams")}>Team</button>
+                    <button onClick={() => setOpenPage("news")}>News</button>
+                    <button onClick={() => setOpenPage("achievements")}>Achievement</button>
+                    <button onClick={() => setOpenPage("contact")}>Contact</button>
                 </div>
                 <div className="contact--info">
                     <p>Contact</p>
@@ -53,7 +53,7 @@ const Footer = () => {
                     <span>Privacy Policy</span>
                     <span>Terms of Service</span>
                 </div>
-                
+
             </div>
         </div>
     )
