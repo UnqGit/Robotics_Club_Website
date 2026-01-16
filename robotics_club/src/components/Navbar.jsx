@@ -1,79 +1,117 @@
-import { useRef, useEffect } from 'react'
-import '../appStyle.css'
+import { useRef, useEffect } from 'react';
+import '../appStyle.css';
 
 const Navbar = ({ openPage, setOpenPage, hamburger, setHamburger }) => {
-    const menuRef = useRef(null);
-    const hamburgerRef = useRef(null);
+  const menuRef = useRef(null);
+  const hamburgerRef = useRef(null);
 
-    // Close menu when clicking outside
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (
-                hamburger &&
-                menuRef.current &&
-                !menuRef.current.contains(event.target) &&
-                hamburgerRef.current &&
-                !hamburgerRef.current.contains(event.target)
-            ) {
-                setHamburger(false);
-            }
-        };
-
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, [hamburger, setHamburger]);
-
-    const handleMobileNav = (page) => {
-        setOpenPage(page);
+  // Synchronize event listeners to handle clicks outside the component scope
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        hamburger &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        hamburgerRef.current &&
+        !hamburgerRef.current.contains(event.target)
+      ) {
         setHamburger(false);
+      }
     };
 
-    {/* The Navbar section */ }
-    return (
-        <div className="navbar--nb">
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [hamburger, setHamburger]);
 
-            <div className="logo--point">
-                <img src='/assets/Robotics_logo.png' alt="logo" />
-                <h1>Robotics club</h1>
-            </div>
-            <div className="navigating--navbar">
-                <button className={openPage === "home" ? "page--open" : ""} onClick={() => setOpenPage("home")}>Home</button>
-                <button className={openPage === "about" ? "page--open" : ""} onClick={() => setOpenPage("about")}>About</button>
-                <button className={openPage === "projects" ? "page--open" : ""} onClick={() => setOpenPage("projects")}>Projects</button>
-                <button className={openPage === "events" ? "page--open" : ""} onClick={() => setOpenPage("events")}>Events</button>
-                <button className={openPage === "teams" ? "page--open" : ""} onClick={() => setOpenPage("teams")}>Teams</button>
-                <button className={openPage === "news" ? "page--open" : ""} onClick={() => setOpenPage("news")}>News</button>
-                <button className={openPage === "achievements" ? "page--open" : ""} onClick={() => setOpenPage("achievements")}>Achievements</button>
-                <button className={openPage === "contact" ? "page--open" : ""} onClick={() => setOpenPage("contact")}>Contact</button>
-            </div>
+  // Handle navigation updates and state resets for mobile interfaces
+  const handleMobileNav = (page) => {
+    setOpenPage(page);
+    setHamburger(false);
+  };
 
-            {/* Humberger */}
-            <button
-                ref={hamburgerRef}
-                className={`hamburger ${hamburger ? "isOpen" : ""}`}
-                onClick={() => setHamburger(prev => !prev)}
-                aria-label="Toggle menu"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  return (
+    <div className="navbar--nb">
+      <div className="logo--point">
+        <img src="/assets/Robotics_logo.png" alt="logo" />
+        <h1>Robotics club</h1>
+      </div>
 
-            <div ref={menuRef} className={`mobile-menu ${hamburger ? "show" : ""}`}>
-                <button onClick={() => handleMobileNav("home")}>Home</button>
-                <button onClick={() => handleMobileNav(("about"))}>About</button>
-                <button onClick={() => handleMobileNav(("projects"))}>Projects</button>
-                <button onClick={() => handleMobileNav(("events"))}>Events</button>
-                <button onClick={() => handleMobileNav(("teams"))}>Teams</button>
-                <button onClick={() => handleMobileNav(("news"))}>News</button>
-                <button onClick={() => handleMobileNav(("achievements"))}>Achievements</button>
-                <button onClick={() => handleMobileNav(("contact"))}>Contact</button>
-            </div>
+      <div className="navigating--navbar">
+        <button 
+          className={openPage === "home" ? "page--open" : ""} 
+          onClick={() => setOpenPage("home")}
+        >
+          Home
+        </button>
+        <button 
+          className={openPage === "about" ? "page--open" : ""} 
+          onClick={() => setOpenPage("about")}
+        >
+          About
+        </button>
+        <button 
+          className={openPage === "projects" ? "page--open" : ""} 
+          onClick={() => setOpenPage("projects")}
+        >
+          Projects
+        </button>
+        <button 
+          className={openPage === "events" ? "page--open" : ""} 
+          onClick={() => setOpenPage("events")}
+        >
+          Events
+        </button>
+        <button 
+          className={openPage === "teams" ? "page--open" : ""} 
+          onClick={() => setOpenPage("teams")}
+        >
+          Teams
+        </button>
+        <button 
+          className={openPage === "news" ? "page--open" : ""} 
+          onClick={() => setOpenPage("news")}
+        >
+          News
+        </button>
+        <button 
+          className={openPage === "achievements" ? "page--open" : ""} 
+          onClick={() => setOpenPage("achievements")}
+        >
+          Achievements
+        </button>
+        <button 
+          className={openPage === "contact" ? "page--open" : ""} 
+          onClick={() => setOpenPage("contact")}
+        >
+          Contact
+        </button>
+      </div>
 
-        </div>
-    )
-}
+      <button
+        ref={hamburgerRef}
+        className={`hamburger ${hamburger ? "isOpen" : ""}`}
+        onClick={() => setHamburger(prev => !prev)}
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-export default Navbar
+      <div ref={menuRef} className={`mobile-menu ${hamburger ? "show" : ""}`}>
+        <button onClick={() => handleMobileNav("home")}>Home</button>
+        <button onClick={() => handleMobileNav("about")}>About</button>
+        <button onClick={() => handleMobileNav("projects")}>Projects</button>
+        <button onClick={() => handleMobileNav("events")}>Events</button>
+        <button onClick={() => handleMobileNav("teams")}>Teams</button>
+        <button onClick={() => handleMobileNav("news")}>News</button>
+        <button onClick={() => handleMobileNav("achievements")}>Achievements</button>
+        <button onClick={() => handleMobileNav("contact")}>Contact</button>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
