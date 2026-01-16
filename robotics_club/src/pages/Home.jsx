@@ -49,7 +49,7 @@ const Home = ({setOpenPage}) => {
                     contentData
                     .filter(item => item.type === "highlight")
                     .map(item => (
-                        <div className="highlights" key={item.id}>
+                        <div className="highlights card" key={item.id}>
                             <div className={`highlight--icon ${item.style}`}>
                                 <img src={item.Icon} alt='highlight Icon' />
                             </div>

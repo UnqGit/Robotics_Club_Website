@@ -18,8 +18,8 @@ body {
     height: fit-content;
     margin: 0;
     padding: 0;
-    /* background: linear-gradient(rgb(145, 145, 145), rgb(163, 163, 246)); */
-    background-color: #0A1930;
+    background: linear-gradient(180deg,  #0A1930,  #120a30);
+    /* background-color: #0A1930; */
 }
 
 .main--container--mn .navbar--nb {
@@ -32,7 +32,8 @@ body {
     overflow-y: hidden;
     display: flex;
     align-items: center;
-    background-color: #0A1930;
+    background-color:#0A1930;
+    box-shadow: 0 5px 12px #0A1930;
     margin: 0 auto;
 }
 
@@ -101,7 +102,7 @@ button:active {
 
 .card:hover {
     transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 12px 25px rgba(30, 60, 211, 0.5);
+    box-shadow: 0 0 20px rgba(30, 60, 211, 0.5);
     border: rgb(133, 81, 247);
 }
 
@@ -406,7 +407,8 @@ button:active {
     margin: 20px 10px;
     border-radius: 15px;
     /* background-color: rgb(177, 154, 246); */
-    background-color: #132F4C;
+    /* background-color: #132F4C; */
+    background: linear-gradient(135deg, #153556, rgb(46, 26, 72));
     text-align: left;
     padding-left: 10px;
     transition:
@@ -607,6 +609,7 @@ button:active {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     width: 100%;
+    padding: 20px;
     justify-content: center;
     justify-items: center;
 }
@@ -616,10 +619,12 @@ button:active {
     box-sizing: border-box;
     border-radius: 15px;
     text-align: left;
-    padding-left: 10px;
+    padding: 20px;
     align-items: stretch;
     background-color: #132F4C;
     display: flex;
+    background: linear-gradient(120deg, #0A1930, rgb(23, 59, 76));
+    /* box-shadow: 0 0 15px black; */
     flex-direction: column;
 }
 
@@ -678,8 +683,17 @@ button:active {
     transition: transform 0.3s ease, fill 0.3s ease;
 }
 
-.main--container--mn .hero--section .club--highlight .highlight--boxes .highlights .highlight--icon .achievement {
+.main--container--mn .hero--section .club--highlight .highlight--boxes .highlights .highlight--icon.achievement {
     background: linear-gradient(135deg, rgb(0, 0, 0), rgb(255, 255, 255));
+}
+.main--container--mn .hero--section .club--highlight .highlight--boxes .highlights .highlight--icon.project {
+    background: linear-gradient(135deg, rgb(155, 97, 97), rgb(78, 58, 94));
+}
+.main--container--mn .hero--section .club--highlight .highlight--boxes .highlights .highlight--icon.industryCircle {
+    background: linear-gradient(135deg, rgb(123, 233, 113), rgb(214, 134, 60));
+}
+.main--container--mn .hero--section .club--highlight .highlight--boxes .highlights .highlight--icon.innovation {
+    background: linear-gradient(135deg, rgb(13, 64, 219), rgb(139, 63, 214));
 }
 
 .main--container--mn .hero--section .club--highlight .highlight--boxes .highlights .highlight--icon:hover {
@@ -989,7 +1003,8 @@ button:active {
     text-align: left;
     padding-left: 10px;
     align-items: stretch;
-    background-color: #132F4C;
+    /* background-color: #132F4C; */
+    background: linear-gradient(60deg, #172b41,#1a3e64);
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -1282,6 +1297,8 @@ button:active {
     flex-direction: column;
     align-self: center;
     height: 250px;
+    /* background: linear-gradient(90deg, rgba(62, 55, 46, 0.635), rgba(58, 28, 55, 0.851)); */
+    background: linear-gradient(72deg, rgba(40, 74, 88, 0.635), rgba(36, 42, 95, 0.12));
     transition: all 0.3s ease;
 }
 
@@ -1563,6 +1580,11 @@ button:active {
     font-size: 1.1rem;
     color: rgb(0, 221, 255);
     background-color: rgb(36, 25, 64);
+    transition: all 0.3 ease;
+}
+
+.projects--pro .content--pro .filter--pro button:hover {
+    border: solid 1px white;
 }
 
 .projects--pro .content--pro .no--project {
@@ -1870,7 +1892,7 @@ button:active {
     left: 25%;
     /* LEFT CORNER (as you wanted) */
 
-    background: linear-gradient(to right, rgb(233, 9, 54) 2%, rgb(0, 0, 255));
+    background: linear-gradient(to right, rgb(230, 115, 138) 2%, rgb(135, 135, 228));
     backdrop-filter: blur(6px);
 
     font-weight: bolder;
@@ -1880,8 +1902,9 @@ button:active {
     border-radius: 20px;
 
     font-size: 12px;
-    font-weight: 500;
+    font-weight: bolder;
     z-index: 9;
+    box-shadow: 0 0 10px black;
 }
 
 
@@ -1891,7 +1914,7 @@ button:active {
     right: 25%;
     /* LEFT CORNER (as you wanted) */
 
-    background: linear-gradient(to top, green, rgb(238, 0, 255));
+    background: linear-gradient(to right, rgb(130, 235, 130), rgb(229, 145, 233));
     backdrop-filter: blur(6px);
 
     font-weight: bolder;
@@ -1901,8 +1924,9 @@ button:active {
     border-radius: 20px;
 
     font-size: 12px;
-    font-weight: 500;
+    font-weight: folder;
     z-index: 9;
+    box-shadow: 0 0 10px black;
 }
 
 
