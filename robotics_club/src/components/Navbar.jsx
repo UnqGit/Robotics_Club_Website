@@ -1,17 +1,41 @@
+import { useRef, useEffect } from 'react'
 import '../appStyle.css'
 
-const Navbar = ({openPage, setOpenPage, hamburger, setHamburger}) => {
+const Navbar = ({ openPage, setOpenPage, hamburger, setHamburger }) => {
+    const menuRef = useRef(null);
+    const hamburgerRef = useRef(null);
+
+    // Close menu when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (
+                hamburger &&
+                menuRef.current &&
+                !menuRef.current.contains(event.target) &&
+                hamburgerRef.current &&
+                !hamburgerRef.current.contains(event.target)
+            ) {
+                setHamburger(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [hamburger, setHamburger]);
+
     const handleMobileNav = (page) => {
         setOpenPage(page);
         setHamburger(false);
     };
 
-    {/* The Navbar section */}
-    return (    
+    {/* The Navbar section */ }
+    return (
         <div className="navbar--nb">
 
             <div className="logo--point">
-                <img src='./src/assets/Robotics_logo.png' alt="logo" />
+                <img src='/assets/Robotics_logo.png' alt="logo" />
                 <h1>Robotics club</h1>
             </div>
             <div className="navigating--navbar">
@@ -27,16 +51,17 @@ const Navbar = ({openPage, setOpenPage, hamburger, setHamburger}) => {
 
             {/* Humberger */}
             <button
+                ref={hamburgerRef}
                 className={`hamburger ${hamburger ? "isOpen" : ""}`}
                 onClick={() => setHamburger(prev => !prev)}
                 aria-label="Toggle menu"
-                >
+            >
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <div className={`mobile-menu ${hamburger ? "show" : ""}`}>
+            <div ref={menuRef} className={`mobile-menu ${hamburger ? "show" : ""}`}>
                 <button onClick={() => handleMobileNav("home")}>Home</button>
                 <button onClick={() => handleMobileNav(("about"))}>About</button>
                 <button onClick={() => handleMobileNav(("projects"))}>Projects</button>

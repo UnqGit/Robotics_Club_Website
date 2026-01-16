@@ -179,7 +179,7 @@ const Projects = () => {
                         <h2>Achievement : </h2>
                         <p className='achievement'>
                           <div className="achievement--icon--project">
-                            <img src="./src/assets/icons/achievements.svg?react" alt="icon" loading="lazy"/>
+                            <img src="/assets/icons/achievements.svg?react" alt="icon" loading="lazy"/>
                           </div>
                           {
                             activeProject.Achievement
