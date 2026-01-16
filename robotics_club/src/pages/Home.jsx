@@ -74,16 +74,16 @@ const Home = ({setOpenPage}) => {
                         <p>Join us for a 3-day event features workshop, competitions, and keynotes speeches from industry leaders.</p>
                         <p>Register now to secure your spot!</p>
                         <div className="next--event--detail">
-                            <img src="./src/assets/icons/events.svg?react" alt="calender" />
+                            <img src="/assets/icons/events.svg?react" alt="calender" />
                             <p>March 15, 2026</p>
-                            <img src='./src/assets/icons/about.svg?react' alt='Gathering' />
+                            <img src='/assets/icons/about.svg?react' alt='Gathering' />
                             <p>500+ participants expected</p>
                         </div>
                         <button className="next--event--detail--button">View Details ➜</button>
                     </div>
                 </div>
                 <div className="motion--box">
-                    <img src="./src/assets/icons/events.svg?react" alt="Next--Event" />
+                    <img src="/assets/icons/events.svg?react" alt="Next--Event" />
                 </div>
             </div>
 

@@ -29,7 +29,7 @@ body {
     width: 100%;
     z-index: 1000;
     height: 70px;
-    overflow-y: hidden;
+    overflow: visible;
     display: flex;
     align-items: center;
     background-color: #0A1930;
@@ -227,15 +227,17 @@ button:active {
     right: 20px;
     width: 240px;
     max-width: calc(100vw - 20px);
-    background: #fff;
+    background: rgba(10, 25, 48, 0.98);
     border-radius: 12px;
     padding: 10px;
+    z-index: 9999;
 
     opacity: 0;
     transform: translateY(-12px) scale(0.95);
     pointer-events: none;
 
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
 }
 
@@ -254,12 +256,12 @@ button:active {
     font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
-
+    color: white;
     transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .mobile-menu button:hover {
-    background: #f3f3f3;
+    background: rgba(138, 43, 226, 0.3);
 }
 
 .mobile-menu button:active {
@@ -1671,20 +1673,25 @@ button:active {
     .projects--pro .content--pro .projects--filling .pro--box img {
         height: 180px;
     }
+
     .projects--pro .content--pro .projects--filling {
         flex-wrap: wrap;
     }
+
     .projects--pro .content--pro .projects--filling .pro--box {
         width: 30%;
     }
+
     .projects--pro .content--pro .filter--pro button {
         padding: 7px 3px;
         font-size: 1rem;
     }
+
     .projects--pro .content--pro .filter--pro .type {
         padding: 7px;
         font-size: 1.1rem;
     }
+
     .projects--pro .content--pro .filter--pro .year {
         padding: 7px;
         font-size: 1.1rem;
@@ -1695,20 +1702,25 @@ button:active {
     .projects--pro .content--pro .projects--filling .pro--box img {
         height: 180px;
     }
+
     .projects--pro .content--pro .projects--filling {
         flex-wrap: wrap;
     }
+
     .projects--pro .content--pro .projects--filling .pro--box {
         width: 45%;
     }
+
     .projects--pro .content--pro .filter--pro button {
         padding: 3px 3px;
         font-size: 0.8rem;
     }
+
     .projects--pro .content--pro .filter--pro .type {
         padding: 5px;
         font-size: 1rem;
     }
+
     .projects--pro .content--pro .filter--pro .year {
         padding: 5px;
         font-size: 1rem;
@@ -1719,20 +1731,25 @@ button:active {
     .projects--pro .content--pro .projects--filling .pro--box img {
         height: 180px;
     }
+
     .projects--pro .content--pro .projects--filling {
         flex-wrap: wrap;
     }
+
     .projects--pro .content--pro .projects--filling .pro--box {
         width: 75%;
     }
+
     .projects--pro .content--pro .filter--pro button {
         padding: 3px;
         font-size: smaller;
     }
+
     .projects--pro .content--pro .filter--pro .type {
         padding: 5px;
         font-size: 0.8rem;
     }
+
     .projects--pro .content--pro .filter--pro .year {
         padding: 5px;
         font-size: 0.8rem;
@@ -2273,12 +2290,15 @@ h2 {
 .events--eve--section .filteringEvents .bottom--eve .option .option--icon.invert.calendar {
     background: linear-gradient(to right, rgb(78, 247, 157), rgb(82, 140, 195));
 }
+
 .events--eve--section .filteringEvents .bottom--eve .option .option--icon.invert.time {
     background: linear-gradient(to right, rgb(179, 78, 247), rgb(7, 230, 219));
 }
+
 .events--eve--section .filteringEvents .bottom--eve .option .option--icon.invert.venue {
     background: linear-gradient(to right, rgb(184, 184, 98), rgb(183, 76, 199));
 }
+
 .events--eve--section .filteringEvents .bottom--eve .option .option--icon.invert.expected {
     background: linear-gradient(to right, rgb(100, 100, 204), rgb(233, 39, 126));
 }
@@ -3324,6 +3344,7 @@ h2 {
     display: flex;
     margin-left: 20px;
 }
+
 .achievement--content .content--div .achieve--date p {
     font-size: smaller;
 }
@@ -3336,10 +3357,12 @@ h2 {
     font-size: 1.1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .achievement--content .content--div .content--data h3 {
     font-size: 0.9rem;
     font-family: 'Inter', sans-serif;
 }
+
 .achievement--content .content--div .content--data .team--name {
     font-size: small;
     font-weight: bold;
@@ -3415,9 +3438,11 @@ h2 {
     .achievement--content .content--div .imgturn {
         height: 90%;
     }
+
     .achievement--content .content--div .imgturn img {
         width: 100%;
     }
+
     .achievement--content .content--div .content--data {
         height: 40%;
     }
@@ -3566,15 +3591,19 @@ h2 {
         display: flex;
         flex-direction: column;
     }
+
     .footer--option .footer--container .Navbar {
         width: 100%;
     }
+
     .footer--option .footer--container .quick--link {
         margin-left: 30px;
     }
+
     .footer--option .footer--container .resources--link {
         margin-left: 30px;
     }
+
     .footer--option .footer--container .contact--info {
         margin-left: 30px;
     }
