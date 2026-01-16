@@ -28,10 +28,11 @@ const App = () => {
         setHamburger={setHamburger}
       />
       
-      { openPage === "home"  && 
-      <Home
-        setOpenPage={setOpenPage}
-      /> 
+      {
+        openPage === "home"  && 
+        <Home
+          setOpenPage={setOpenPage}
+        /> 
       }
       { openPage === "about" && <About /> }
       { openPage === "projects" && <Projects /> }

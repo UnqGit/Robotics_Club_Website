@@ -3,7 +3,7 @@ const contentData = [
     id: 1,
     type: "explore",
     Icon: "./src/assets/icons/about.svg?react",
-    style: "aboutUs",
+    style: "about",
     title: "About Us",
     description: "Discover our mission and vision",
     btnText: "Learn more ➜"

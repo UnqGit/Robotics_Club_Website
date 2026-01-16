@@ -15,14 +15,14 @@ const Navbar = ({openPage, setOpenPage, hamburger, setHamburger}) => {
                 <h1>Robotics club</h1>
             </div>
             <div className="navigating--navbar">
-                <button onClick={() => setOpenPage("home")}>Home</button>
-                <button onClick={() => setOpenPage("about")}>About</button>
-                <button onClick={() => setOpenPage("projects")}>Projects</button>
-                <button onClick={() => setOpenPage("events")}>Events</button>
-                <button onClick={() => setOpenPage("teams")}>Teams</button>
-                <button onClick={() => setOpenPage("news")}>News</button>
-                <button onClick={() => setOpenPage("achievements")}>Achievements</button>
-                <button onClick={() => setOpenPage("contact")}>Contact</button>
+                <button className={openPage === "home" ? "page--open" : ""} onClick={() => setOpenPage("home")}>Home</button>
+                <button className={openPage === "about" ? "page--open" : ""} onClick={() => setOpenPage("about")}>About</button>
+                <button className={openPage === "projects" ? "page--open" : ""} onClick={() => setOpenPage("projects")}>Projects</button>
+                <button className={openPage === "events" ? "page--open" : ""} onClick={() => setOpenPage("events")}>Events</button>
+                <button className={openPage === "teams" ? "page--open" : ""} onClick={() => setOpenPage("teams")}>Teams</button>
+                <button className={openPage === "news" ? "page--open" : ""} onClick={() => setOpenPage("news")}>News</button>
+                <button className={openPage === "achievements" ? "page--open" : ""} onClick={() => setOpenPage("achievements")}>Achievements</button>
+                <button className={openPage === "contact" ? "page--open" : ""} onClick={() => setOpenPage("contact")}>Contact</button>
             </div>
 
             {/* Humberger */}

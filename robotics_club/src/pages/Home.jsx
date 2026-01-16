@@ -34,7 +34,9 @@ const Home = ({setOpenPage}) => {
                             </div>
                             <h1>{item.title}</h1>
                             <p>{item.description}</p>
-                            <button>{item.btnText}</button>
+                            <button onClick={() => {
+                                setOpenPage(item.style);
+                            }}>{item.btnText}</button>
                         </div>
                     ))
                 }
