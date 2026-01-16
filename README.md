@@ -28,7 +28,9 @@
 - **Visual Studio Code:**  
 &nbsp;&nbsp;A light-weight modern IDE and text editor for scalable work environment.
 - **SVG:**  
-&nbsp;&nbsp;A vector based XML image that can be scaled infinitely without losing any quality, used for icons.
+&nbsp;&nbsp;A vector based XML image that can be scaled infinitely without losing any quality, used for icons.  
+- **Firebase:**
+&nbsp;&nbsp;For fast, secure hosting for web apps.
 
 ## Frameworks and libararies:
 - **React:**  
@@ -55,10 +57,22 @@ Making different react documents for each page made in the website, which is eas
 [Photos](https://roboticsnitp.co.in/)  
 [Icons](https://fontawesome.com/)  
 
+# Screenshots:
+
+## PC view:
+![homepage](./robotics_club/src/assets/screenshots/homePageScreenshotPC.png)
+![achievement](./robotics_club/src/assets/screenshots/achievementSectionPC.png)
+![contact](./robotics_club/src/assets/screenshots/contactPageScreenshotPC.png)
+
+## Mobile view:
+![homepage](./robotics_club/src/assets/screenshots/homePageScreenshotMobile.png)
+![achievement](./robotics_club/src/assets/screenshots/achievementsScreenshotMobile.png)
+![news](./robotics_club/src/assets/screenshots/newsScreenshotMobile.png)
+
 # How to run:
 
 ## Hosted website:
-[Robotics Club Website](https://www.google.com)
+[Robotics Club Website](https://robotics-club-f92d5.web.app/)
 
 ## Local web host:
 > [Install React](https://react.dev/learn/installation) if not already installed.
