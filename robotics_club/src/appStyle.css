@@ -1630,11 +1630,12 @@ button:active {
 }
 
 .projects--pro .content--pro .projects--filling {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
     width: 95%;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     justify-items: center;
     margin-bottom: 80px;
     margin-top: 60px;
