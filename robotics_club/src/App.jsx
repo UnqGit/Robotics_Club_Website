@@ -1,24 +1,26 @@
-import React from 'react'
-import './appStyle.css'
+import React, { useState, useEffect } from 'react';
+import './appStyle.css';
 
-import Navbar from './components/Navbar'
+// Component Imports
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
-import Home from './pages/Home'
-import About from './pages/About'
-import Projects from './pages/Projects'
-import Events from './pages/Event'
-import Achievements from './pages/Achievements'
-import Contact from './pages/Contact'
-import News from './pages/News'
-import Teams from './pages/Teams'
-
-import Footer from './components/Footer'
+// Page Imports
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Events from './pages/Event';
+import Achievements from './pages/Achievements';
+import Contact from './pages/Contact';
+import News from './pages/News';
+import Teams from './pages/Teams';
 
 const App = () => {
-  const [openPage, setOpenPage] = React.useState("home");
-  const [hamburger, setHamburger] = React.useState(false);
+  const [openPage, setOpenPage] = useState("home");
+  const [hamburger, setHamburger] = useState(false);
 
-  React.useEffect(() => {
+  // Reset scroll position to the top-left upon page navigation
+  useEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,
@@ -27,8 +29,7 @@ const App = () => {
   }, [openPage]);
 
   return (
-    <div className='main--container--mn'>
-
+    <div className="main--container--mn">
       <Navbar
         openPage={openPage}
         setOpenPage={setOpenPage}
@@ -36,12 +37,8 @@ const App = () => {
         setHamburger={setHamburger}
       />
 
-      {
-        openPage === "home" &&
-        <Home
-          setOpenPage={setOpenPage}
-        />
-      }
+      {/* Conditional rendering of page components based on state */}
+      {openPage === "home" && <Home setOpenPage={setOpenPage} />}
       {openPage === "about" && <About />}
       {openPage === "projects" && <Projects />}
       {openPage === "events" && <Events />}
@@ -53,7 +50,7 @@ const App = () => {
       <Footer setOpenPage={setOpenPage} />
 
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

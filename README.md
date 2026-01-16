@@ -1,5 +1,19 @@
 # ***Robotics Club Website***
 
+## Breif explaination:
+
+The Robotics Club website was designed with one core idea in mind: keep it fast, clean, scalable, and good enough to intrigue both humans and robots.  Since this is a front-end–focused project, we leaned heavily into modern web technologies that promote modularity, performance, and maintainability.  
+
+We chose React as the backbone because it allows the UI to be broken into reusable components: which is perfect for pages like projects, teams, and events that have noticable repeating patterns. This modular approach also makes future updates simple. JavaScript ensues all logic, using built-in language methods like map() and filter() to dynamically render content efficiently.  
+
+For development speed, Vite was used as the build tool. It offers lightning-fast hot reloading and a smoother developer experience compared to traditional setups. CSS ensures the site remains responsive across devices, while SVG icons were used to maintain visual clarity at any resolution.  
+
+To add life to the interface, we integrated Motion (Framer Motion) for smooth, lightweight animations that enhance user experience without sacrificing performance. Version control via Git enabled seamless team collaboration, and VS Code provided a flexible and scalable development environment.  
+
+Future scalability was a key consideration. The use of structured data objects (contentData) and page-based .jsx files allows new content and pages to be added with minimal effort—plug, play, deploy.  
+
+Summary: modern tools, smart structure, smooth animations, and room to enhance.
+
 ## Team members:
 
 |      Name       |    Roll No.    |    Phone No.   |            Email            |
@@ -28,7 +42,11 @@
 - **Visual Studio Code:**  
 &nbsp;&nbsp;A light-weight modern IDE and text editor for scalable work environment.
 - **SVG:**  
-&nbsp;&nbsp;A vector based XML image that can be scaled infinitely without losing any quality, used for icons.
+&nbsp;&nbsp;A vector based XML image that can be scaled infinitely without losing any quality, used for icons.  
+- **Vite-Plugin-SVGR:**  
+&nbsp;&nbsp;Used to transform SVGs into importable React components for better styling control.
+- **Firebase:**  
+&nbsp;&nbsp;For fast, secure hosting for web apps.
 
 ## Frameworks and libararies:
 - **React:**  
@@ -55,20 +73,39 @@ Making different react documents for each page made in the website, which is eas
 [Photos](https://roboticsnitp.co.in/)  
 [Icons](https://fontawesome.com/)  
 
+# Screenshots:
+
+## PC view:
+### Homepage:
+![homepage](./robotics_club/src/assets/screenshots/homePageScreenshotPC.png)
+### Achievement:
+![achievement](./robotics_club/src/assets/screenshots/achievementSectionPC.png)
+### Contact:
+![contact](./robotics_club/src/assets/screenshots/contactPageScreenshotPC.png)
+
+## Mobile view:
+### Homepage:
+![homepage](./robotics_club/src/assets/screenshots/homePageScreenshotMobile.png)
+### Achievement:
+![achievement](./robotics_club/src/assets/screenshots/achievementsScreenshotMobile.png)
+### News:
+![news](./robotics_club/src/assets/screenshots/newsScreenshotMobile.png)
+
 # How to run:
 
 ## Hosted website:
-[Robotics Club Website](https://www.google.com)
+[Robotics Club Website](https://robotics-club-f92d5.web.app/)
 
 ## Local web host:
-> [Install React](https://react.dev/learn/installation) if not already installed.
+
+Follow these steps to run the project locally. Ensure you have [Node.js](https://nodejs.org/en) installed.
 
 1. **Open Terminal.**
 2. **Clone the repository:**  
 `git clone https:/github.com/UnqGit/Robotics_Club_Website`
 3. **Change directory:**  
 `cd .\Robotics_Club_Website\robotics_club\`
-4. **Install Vite:**  
-`npm install vite`
+4. **Install all the dependencies:**  
+`npm install`
 5. **Run this command to host the website on localhost:**  
 `npm run dev`  
