@@ -18,6 +18,14 @@ const App = () => {
   const [openPage, setOpenPage] = React.useState("home");
   const [hamburger, setHamburger] = React.useState(false);
 
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }, [openPage]);
+
   return (
     <div className='main--container--mn'>
 
